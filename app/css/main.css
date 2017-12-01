@@ -1012,7 +1012,19 @@ textarea::-moz-focus-inner {
   max-width: 84px;
   padding-right: 15px;
   background: none;
-  border: none; }
+  border: none;
+  outline: none; }
+  .bl_search__field::-webkit-input-placeholder {
+    color: #a9a9a9;
+    font-style: italic; }
+  .bl_search__field:-ms-input-placeholder {
+    color: #a9a9a9;
+    font-style: italic; }
+  .bl_search__field::placeholder {
+    color: #a9a9a9;
+    font-style: italic; }
+  .bl_search__field:focus {
+    box-shadow: 0 0 2px #000; }
 
 .icon-search {
   position: absolute;
@@ -1221,11 +1233,67 @@ textarea::-moz-focus-inner {
     color: #ffd608; }
 
 .btn_callBack {
+  margin-left: 3.8%;
+  margin-top: 23px;
   width: 152px;
   height: 36px;
+  background: inherit;
   border: 2px solid #ffd608;
   color: #ffd608;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  outline: none;
+  transition: all .2s; }
+  .btn_callBack:hover, .btn_callBack:focus, .btn_callBack:active {
+    transition: all .2s;
+    color: #000;
+    background-color: #ffd608; }
+
+.bl_shopBasket {
+  float: right;
+  margin-top: 15px;
+  margin-right: -14px;
+  width: 100%;
+  max-width: 78px;
+  text-align: center; }
+
+.bl_shopBasket__full {
+  position: relative;
+  display: block;
+  color: #fff;
+  min-height: 60px;
+  width: 100%; }
+  .bl_shopBasket__full:hover, .bl_shopBasket__full:focus {
+    color: #fff;
+    text-decoration: underline; }
+
+.icon-shopBasket {
+  position: relative;
+  width: 100%;
+  height: 40px; }
+  .icon-shopBasket:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    background-image: url(../image/sprite.png);
+    background-position: 0px 0px;
+    width: 53px;
+    height: 39px; }
+
+.bl_shopBasket__items {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #fff;
+  color: #191919;
+  font-size: 13px;
+  font-weight: 700; }
 
 /*********************************************/
 /*SECTIONS*/
