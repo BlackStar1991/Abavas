@@ -10,8 +10,9 @@
 /*FONTS*/
 /*********************************************/
 
-@include font-face("Tahoma", "../fonts/Tahoma/Tahoma", 400, normal, woff2 woff ttf );
+@include font-face("Calibri", "../fonts/Calibri/Calibri", 400, normal, woff2 woff ttf );
 @include font-face("FontAwesome", "../fonts/FontAwesome/FontAwesome", 400, normal, woff2 woff ttf);
+@include font-face("BookmanCTTBoldItalic", "../fonts/BookmanCTTBoldItalic/BookmanCTTBoldItalic", 400, normal, woff2 woff ttf);
 
 /*********************************************/
 /*MAIN STYLES*/
@@ -23,8 +24,8 @@ body {
 }
 
 body {
-  font-family: Tahoma, sans-serif;
-  font-size: 16px;
+  font-family: Calibri, sans-serif;
+  font-size: 14px;
   font-weight: 400;
   min-width: 320px;
   position: relative;
@@ -95,6 +96,7 @@ img {
 }
 
 a {
+  font-family: Calibri, sans-serif;
   text-decoration: none;
   color: #000;
   &:hover,
@@ -175,28 +177,6 @@ textarea {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.header{
-  width: 100%;
-  min-height: 40px;
-  background-color: #f00;
-}
-
-.footer{
-  width: 100%;
-  min-height: 80px;
-}
 
 
 
