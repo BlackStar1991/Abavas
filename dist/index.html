@@ -20,7 +20,7 @@
 
     <!-- @formatter:off -->
     <style>
-        /*! normalize.css v3.0.3 */
+        /*! normalize.css */
         html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}legend,td,th{padding:0}
     </style>
     <!-- @formatter:on -->
@@ -58,8 +58,8 @@
                     </div>
                     <div class="col-md-4">
                         <div class="bl_phones">
-                            <a href="tel: +380689683140" class="bl_phones__link">+38 (068) 968 31 40</a>
-                            <a href="tel: +380443626816" class="bl_phones__link">+38 (044) 362 68 16</a>
+                            <a href="tel: +380689683140">+38 (068) 968 31 40</a>
+                            <a href="tel: +380443626816">+38 (044) 362 68 16</a>
                         </div>
                     </div>
                     <div class="col-md-1">
@@ -115,15 +115,15 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3 correct_right">
                         <button class="btn_callBack" type="button">Позвоните мне</button>
-                    </div>
 
-                    <div class="col-md-1">
+
                         <div class="bl_shopBasket">
-                            <a href="#" class="bl_shopBasket__full icon-shopBasket">
+                            <a href="#" class="bl_shopBasket__full">
+                                <div class="icon-shopBasket"></div>
                                 <span class="bl_shopBasket__items">99</span>
-                                <span class="bl_shopBasket__prise">6,145 грн.</span>
+                                <span class="bl_shopBasket__prise">999999 грн.</span>
                             </a>
                         </div>
                     </div>
@@ -142,6 +142,67 @@
     </main>
     <!-- ---------------------------------------- FOOTER --------------------------------------------------------- -->
     <footer class="footer">
+        <section class="footer_firstPart">
+            <div class="container">
+                <div class="col-md-2">
+                    <nav class="">
+                        <ul class="bl_navigation__full">
+                            <li class="bl_navigation__item"><a href="#" class="classbl_navigation__link">Каталог</a>
+                            </li>
+                            <li class="bl_navigation__item"><a href="#" class="classbl_navigation__link">Услуги</a></li>
+                            <li class="bl_navigation__item"><a href="#"
+                                                               class="classbl_navigation__link">Готовые решения</a></li>
+                            <li class="bl_navigation__item"><a href="#"
+                                                               class="classbl_navigation__link">Наши проекты</a></li>
+                            <li class="bl_navigation__item"><a href="#" class="classbl_navigation__link">Блог</a></li>
+                            <li class="bl_navigation__item"><a href="#"
+                                                               class="classbl_navigation__link">Доставка и оплата</a>
+                            </li>
+                            <li class="bl_navigation__item"><a href="#" class="classbl_navigation__link">О нас</a></li>
+                            <li class="bl_navigation__item"><a href="#" class="classbl_navigation__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4">
+                    <div class="bl_phones__footer">
+                        <a href="tel: +380443626816">+38 (044) 362 68 16</a>
+                        <a href="tel: +380689683140">+38 (068) 968 31 40</a>
+                    </div>
+                    <div class="bl_subdcribe">
+                        <p class="bl_subdcribe__text">Есть вопросы? Напиши нам!</p>
+                        <p class="bl_subdcribe__text_yellow">Подпишитесь на нашу рассылку!</p>
+                        <form class="bl_subscribe__fullInput clearfix">
+                            <input class="bl_subscribe__input" type="email" placeholder="Введите ваш e-mail...">
+                            <button class="bl_subscribe__button" type="button">
+                                <i class="bl_subscribe__icon"></i>
+                                <span class="bl_subscribe__choose">Отправить</span>
+                            </button>
+                        </form>
+                        <p class="text_error hidden">Введите ваш email адресс</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bl_adress">
+                        <p>Наш адрес:</p>
+                        <p>04080, Киев, ул. Хвойки, 21,</p>
+                        <p>корп.1, эт.1, оф.2-3</p>
+                        <p>Бизнес центр "Веста"</p>
+                    </div>
+
+                    <div class="bl_socLinks">
+                        <a href="#" class="bl_socLinks__circle bl_socLinks__vk"></a>
+                        <a href="#" class="bl_socLinks__circle bl_socLinks__facebook"></a>
+                        <a href="#" class="bl_socLinks__circle bl_socLinks__twiter"></a>
+                    </div>
+
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+        </section>
+        <section class="footer_secondPart">© Абавас, 2017</section>
+
 
     </footer>
 </div>

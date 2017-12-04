@@ -17,6 +17,13 @@ window.onload = function() {
         });
     }
 
+    var buttonLanguage = $(".bl_language__active"),
+        fieldWithOtherLanguage = $(".bl_language__variables"),
+        buttonChooseRigthLanguage = $(".bl_language__variables_item");
+
+    hideShowEffect(buttonLanguage, fieldWithOtherLanguage);
+    hideShowEffect(buttonChooseRigthLanguage, fieldWithOtherLanguage);
+
 
 //    Discount Products  - Скидки
     /*
@@ -159,7 +166,7 @@ window.onload = function() {
     var telephonseInput = $("input[type='tel']");
     telephonseInput.mask("+38 (0" + "99) 999-99-99", {placeholder: "+38 (0__) ___+__+__"});
 
-    /*
+
         ////////////////// POPUPS LOGIC
 
             function popupWindowShow(btn, field) {
@@ -181,37 +188,35 @@ window.onload = function() {
 
 
         /// POPUP BIFORE ADD TO SHOPBAG
-
-            function popupWindowBiforeAddToShopBag() {
-
-                var TESTBUTTON = $(".TEST_BUTTON");
-
-                var popupWindow = $(".popup_likeShopbag"),
-                    buttonClose = $(".popup_likeShopbag__close"),
-                    buttonContinueBuying = $(".popup_likeShopbag__continueBuying");
-
-                popupWindowShow(TESTBUTTON, popupWindow);
-
-                closePopupWindow(buttonClose, popupWindow);
-                closePopupWindow(buttonContinueBuying, popupWindow);
-                closePopupWindow(blackWrapper, popupWindow);
-
-            }
-
-            popupWindowBiforeAddToShopBag();
+        //
+        //     function popupWindowBiforeAddToShopBag() {
+        //
+        //         var TESTBUTTON = $(".TEST_BUTTON");
+        //
+        //         var popupWindow = $(".popup_likeShopbag"),
+        //             buttonClose = $(".popup_likeShopbag__close"),
+        //             buttonContinueBuying = $(".popup_likeShopbag__continueBuying");
+        //
+        //         popupWindowShow(TESTBUTTON, popupWindow);
+        //
+        //         closePopupWindow(buttonClose, popupWindow);
+        //         closePopupWindow(buttonContinueBuying, popupWindow);
+        //         closePopupWindow(blackWrapper, popupWindow);
+        //
+        //     }
+        //
+        //     popupWindowBiforeAddToShopBag();
 
         ////////// CallBack PopUp
 
             function popupWindowCallBack() {
-                var buttonCallback = $(".btn_callBack"),
+                var buttonCallback = $(".js-callBack"),
                     fieldCallBack = $(".bl_callback"),
                     buttonClose = $(".bl_callback__close");
 
                 popupWindowShow(buttonCallback, fieldCallBack);
                 closePopupWindow(buttonClose, fieldCallBack);
                 closePopupWindow(blackWrapper, fieldCallBack);
-
-
             }
 
             popupWindowCallBack();
@@ -224,12 +229,12 @@ window.onload = function() {
                 var fieldSuccess = $(".bl_success");
 
                 closePopupWindow(blackWrapper, fieldSuccess);
-                closePopupWindow( fieldSuccess, fieldSuccess);
+                closePopupWindow(fieldSuccess, fieldSuccess);
             }
 
             popupWindowSuccsess();
 
-        */
+
 
 
 };

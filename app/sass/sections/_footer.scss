@@ -1,5 +1,343 @@
-.footer{
+.footer {
   width: 100%;
   min-height: 80px;
 }
+
+.footer_firstPart {
+  min-height: 164px;
+  background-color: #25231f;
+  padding-bottom: 38px;
+  padding-top: 38px;
+  color: $color_grey2;
+  font-size: 16px;
+  a {
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color_grey2;
+    outline: none;
+    &:hover,
+    &:focus {
+      color: $color_yellow;
+    }
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.bl_phones__footer {
+  margin-left: 50px;
+  width: 100%;
+}
+
+.bl_navigation {
+  width: 100%;
+}
+
+.bl_navigation__full {
+  width: 100%;
+}
+
+.bl_navigation__item {
+  width: 100%;
+}
+
+.bl_subdcribe {
+  width: 100%;
+  margin-top: 12px;
+  margin-left: 50px;
+}
+
+.bl_subdcribe__text_yellow {
+  margin-top: 20px;
+  color: $color_yellow;
+}
+
+.bl_subscribe__fullInput {
+  position: relative;
+  width: 284px;
+  margin-top: 17px;
+}
+
+.bl_subscribe__input {
+  float: left;
+  width: 176px;
+  height: 35px;
+  background-color: inherit;
+  padding-left: 11px;
+  color: $color_yellow;
+  border: 1px solid $color_yellow;
+  outline: none;
+  &::placeholder {
+
+    font-style: italic;
+  }
+
+
+  &:focus {
+    box-shadow: 0 0 6px $color_yellow;
+  }
+
+
+}
+
+.bl_subscribe__button {
+  position: relative;
+  float: left;
+  height: 35px;
+  color: #191919;
+  font-family: $Calibri;
+  padding: 0 14px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  outline: none;
+  background-color: $color_yellow;
+  overflow: hidden;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    content: '';
+    height: 100%;
+    width: 100%;
+    transition: 0.3s all ease;
+    background: $color_yellow2;
+    z-index: 1;
+  }
+  &:hover {
+    &:before {
+      top: 0;
+      transition: 0.3s all ease;
+    }
+  }
+  &:focus{
+    text-decoration: underline;
+  }
+}
+
+.bl_subscribe__choose{
+  position: relative;
+  z-index:2;
+}
+
+
+.bl_adress{
+  width: 100%;
+  margin-left: 50px;
+}
+
+.bl_socLinks{
+  margin-top: 48px;
+  margin-left: 50px;
+}
+
+a.bl_socLinks__circle{
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #7f7868;
+  margin-right: 19px;
+  display: inline-block;
+  &:hover,
+  &:focus{
+    background-color: $color_yellow;
+  }
+}
+
+.bl_socLinks__vk{
+  &:after{
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: url("../image/vk.svg") 50% 50% no-repeat;
+  }
+}
+.bl_socLinks__facebook{
+  &:after{
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: url("../image/facebook.svg") 50% 50% no-repeat;
+  }
+}
+.bl_socLinks__twiter{
+  &:after{
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: url("../image/twitter.svg") 50% 50% no-repeat;
+  }
+}
+
+
+.bl_map{
+  width: 100%;
+  max-width:320px;
+  img{
+    display: block;
+    width: 100%;
+  }
+}
+
+
+
+
+.footer_secondPart {
+  text-align: center;
+  width: 100%;
+  min-height: 39px;
+  line-height: 39px;
+  color: #2f2f2f;
+  background-color: #181614;
+}
+
+
+
+
+/* CALLBACK FORM */
+
+
+.bl_callback{
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color_yellow;
+  min-width: 200px;
+  width: 544px;
+  padding: 21px;
+  z-index: 1080;
+}
+
+
+.bl_callback__close {
+  position: relative;
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  outline: none;
+  background: none;
+  z-index: 3;
+  &:focus{
+    box-shadow: 0 0 3px 2px #000;
+  }
+
+}
+
+.icon-close{
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include sprite($icon-close);
+  }
+}
+
+.bl_callback__text{
+  vertical-align: top;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 246px;
+  min-height: 39px;
+  color: #191919;
+  font-family: $Calibri;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+
+
+.bl_callback__form {
+  clear: both;
+  width: 100%;
+  color: #191919;
+  padding: 1px 10px 10px;
+}
+
+.bl_callback__label {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto 24px;
+}
+
+.bl_callback__form .text_error{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+.bl_callback__input {
+  margin: 52px auto 0;
+  display: block;
+  padding-left: 12px;
+  font-size: 25px;
+  width: 100%;
+  max-width: 280px;
+  border: none;
+  border-bottom: 1px solid #191919;
+  outline: none;
+  background: inherit;
+  &::placeholder{
+    color: #191919;
+    font-size: 25px;
+  }
+}
+
+.bl_callback__button {
+  display: block;
+  margin: 65px auto 23px;
+  width: 220px;
+  height: 50px;
+  background-color: #191919;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+
+  transition: .3s all;
+
+  &:hover,
+  &:focus{
+    transition: .3s all;
+    color: #191919;
+    background-color: #fff;
+  }
+}
+
+.bl_success{
+  max-width: 352px;
+  min-height: 40px;
+  margin: 80px auto;
+  text-align: center;
+  color: #191919;
+  font-family: $Calibri;
+  font-size: 19px;
+  font-weight: 700;
+}
+
 
