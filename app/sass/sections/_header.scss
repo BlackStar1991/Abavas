@@ -14,7 +14,7 @@
 .nav_main {
   position: relative;
   width: 100%;
-  line-height: 35px;
+  line-height: 40px;
 }
 
 .nav_main__item {
@@ -26,6 +26,8 @@
   color: #a9a9a9;
   &:hover,
   &:focus {
+    outline: none;
+    border: none;
     color: $color_grey;
   }
   &:focus {
@@ -44,6 +46,11 @@
     margin-left: 10px;
     display: inline-block;
     color: $color_grey;
+    outline: none;
+    border: none;
+    &:focus{
+      text-decoration: underline;
+    }
   }
 }
 
@@ -83,6 +90,10 @@
   width: 14px;
   height: 100%;
   z-index: 2;
+  outline: none;
+  &:focus{
+    box-shadow: 0 0 2px $color_grey2;
+  }
 
   &:after {
     content: "";
@@ -117,6 +128,10 @@
   &:focus {
     color: #000;
     text-decoration: underline;
+  }
+  &:focus{
+    outline: none;
+    box-shadow: 0 1px 2px 1px $color_yellow;
   }
 }
 
@@ -215,10 +230,10 @@
 
 .bl_logo__ab {
   position: relative;
-  margin-top: 15px;
+  margin-top: 18px;
   margin-bottom: 15px;
   display: inline-block;
-  padding: 4px 6px 9px;
+  padding: 2px 6px;
   text-align: center;
   color: #191919;
   font-size: 61px;
@@ -311,17 +326,25 @@
   height: 100%;
   text-transform: uppercase;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
+
   font-weight: 700;
+
   border-top: 3px solid inherit;
   &.active {
     border-top: 3px solid $color_yellow;
     color: $color_yellow;
   }
-  &:hover,
-  &:focus{
+  &:hover{
     color: $color_yellow;
   }
+  &:focus{
+
+    outline: none;
+    text-decoration: underline;
+    color: #fff;
+  }
+
 }
 
 
@@ -368,8 +391,12 @@
   width: 100%;
   &:hover,
   &:focus{
+    outline: none;
     color: #fff;
     text-decoration: underline;
+  }
+  &:focus{
+    box-shadow: 0 0 2px 1px $color_yellow;
   }
 }
 
