@@ -998,13 +998,13 @@ textarea::-moz-focus-inner {
     text-decoration: underline; }
 
 .bl_phones {
+  float: right;
+  margin-right: 2vw;
   position: relative;
-  line-height: 35px;
-  width: 100%; }
+  display: inline-block;
+  line-height: 35px; }
   .bl_phones a {
-    float: right;
     margin-left: 10px;
-    display: inline-block;
     color: #797979;
     outline: none;
     border: none; }
@@ -1012,9 +1012,9 @@ textarea::-moz-focus-inner {
       text-decoration: underline; }
 
 .bl_search {
-  display: block;
-  margin: 4px auto 0;
-  width: 100%; }
+  float: right;
+  display: inline-block;
+  margin: 4px auto 0; }
 
 .bl_search__field {
   width: 100%;
@@ -1055,20 +1055,34 @@ textarea::-moz-focus-inner {
     -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     background-image: url(../image/sprite.png);
-    background-position: -58px -23px;
+    background-position: -58px -25px;
     width: 10px;
     height: 10px;
     z-index: 3; }
 
+.icon-search-big:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  background-image: url(../image/sprite.png);
+  background-position: 0px -44px;
+  width: 20px;
+  height: 20px;
+  z-index: 10; }
+
 .bl_mainControls {
+  float: right;
   position: relative;
-  width: 100%;
   line-height: 35px; }
 
 .bl_personalRoom {
   position: relative;
   width: 150px;
   height: 100%;
+  margin-right: 16px;
   text-align: center;
   color: #191919;
   display: inline-block;
@@ -1088,7 +1102,7 @@ textarea::-moz-focus-inner {
   top: 12px;
   left: 10px;
   background-image: url(../image/sprite.png);
-  background-position: -56px -44px;
+  background-position: -83px -46px;
   width: 8px;
   height: 10px; }
 
@@ -1230,18 +1244,18 @@ textarea::-moz-focus-inner {
   width: 100%; }
 
 .bl_navGroup__item {
-  display: inline-block;
-  height: 100%; }
+  display: inline-block; }
 
 .bl_navGroup__link {
   display: block;
   width: 100%;
-  height: 100%;
   text-transform: uppercase;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
-  border-top: 3px solid inherit; }
+  box-sizing: border-box;
+  border-top: 3px solid inherit;
+  border-bottom: 3px solid inherit; }
   .bl_navGroup__link.active {
     border-top: 3px solid #ffd608;
     color: #ffd608; }
@@ -1320,6 +1334,36 @@ textarea::-moz-focus-inner {
   color: #191919;
   font-size: 13px;
   font-weight: 700; }
+
+.nav_main__button {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  background-color: #191919;
+  z-index: 12; }
+
+.bl_search__button {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  background-color: #191919;
+  z-index: 12; }
+
+.icon-gear:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%) rotate(0);
+      transform: translate(-50%, -50%) rotate(0);
+  background-image: url(../image/sprite.png);
+  background-position: -58px 0px;
+  width: 20px;
+  height: 20px; }
 
 /*********************************************/
 /*SECTIONS*/
@@ -1540,7 +1584,7 @@ a.bl_socLinks__circle {
   -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
   background-image: url(../image/sprite.png);
-  background-position: -58px 0px;
+  background-position: -25px -44px;
   width: 18px;
   height: 18px; }
 
@@ -1641,9 +1685,50 @@ a.bl_socLinks__circle {
 /* Large Devices, Wide Screens 1280px */
 @media only screen and (max-width: 1200px) {
   .bl_navGroup {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .bl_navGroup__link.active {
+    border-top-color: transparent;
+    border-bottom: 3px solid #ffd608; }
+  .btn_callBack {
+    float: right; }
+  .bl_shopBasket {
+    width: initial;
+    margin-right: 0;
+    float: none; }
+  .bl_phones {
+    clear: both;
+    margin-right: 0; } }
 
 /* Medium Devices, Desktops 992px */
+@media only screen and (max-width: 991px) {
+  .nav_menu_mobile {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    max-width: 320px;
+    background-color: #000;
+    z-index: 10; }
+  .nav_main {
+    text-align: center; }
+  .bl_mainControls {
+    float: none;
+    width: calc(100% - 35px); }
+  .bl_personalRoom {
+    margin: 0 auto;
+    border-bottom: 1px solid #cfcbbe; }
+  .nav_main__item {
+    display: block;
+    margin: 0 auto 10px; }
+  .nav_main__link {
+    color: #fff; }
+  .bl_search {
+    float: none;
+    position: fixed;
+    top: 0;
+    right: 0; }
+  .bl_search .bl_wrappen {
+    position: absolute; } }
+
 /* Small Devices, Tablets 768px */
 /* Extra Small Devices, Phones 480px */
 /* Custom, iPhone Retina 320px */

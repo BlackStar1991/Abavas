@@ -37,17 +37,18 @@
 
 ////
 .bl_phones {
+  float: right;
+  margin-right: 2vw;
   position: relative;
-
+  display: inline-block;
   line-height: 35px;
-  width: 100%;
+
   a{
-    float: right;
     margin-left: 10px;
-    display: inline-block;
     color: $color_grey;
     outline: none;
     border: none;
+
     &:focus{
       text-decoration: underline;
     }
@@ -55,10 +56,9 @@
 }
 
 .bl_search {
-  display: block;
+  float: right;
+  display: inline-block;
   margin: 4px auto 0;
-  width: 100%;
-
 }
 
 .bl_search__field {
@@ -104,12 +104,26 @@
     @include sprite($icon-search);
     z-index: 3;
   }
-
 }
 
+.icon-search-big{
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include sprite($icon-search-big);
+    z-index: 10;
+  }
+}
+
+
+
+
 .bl_mainControls {
+  float: right;
   position: relative;
-  width: 100%;
   line-height: 35px;
 }
 
@@ -117,6 +131,7 @@
   position: relative;
   width: 150px;
   height: 100%;
+  margin-right: 16px;
   text-align: center;
   color: #191919;
   display: inline-block;
@@ -316,21 +331,19 @@
 
 .bl_navGroup__item {
   display: inline-block;
-  height: 100%;
-
 }
 
 .bl_navGroup__link {
   display: block;
   width: 100%;
-  height: 100%;
   text-transform: uppercase;
   color: #fff;
   font-size: 15px;
 
   font-weight: 700;
-
+  box-sizing: border-box;
   border-top: 3px solid inherit;
+  border-bottom: 3px solid inherit;
   &.active {
     border-top: 3px solid $color_yellow;
     color: $color_yellow;
@@ -426,4 +439,34 @@
   color: #191919;
   font-size: 13px;
   font-weight: 700;
+}
+
+.nav_main__button{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  background-color: $color_headerSecond;
+  z-index:12;
+}
+.bl_search__button{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  background-color: $color_headerSecond;
+  z-index:12;
+}
+
+.icon-gear{
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    @include sprite($icon-gear);
+  }
 }
