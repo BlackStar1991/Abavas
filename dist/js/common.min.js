@@ -24,6 +24,15 @@ window.onload = function() {
     hideShowEffect(buttonLanguage, fieldWithOtherLanguage);
     hideShowEffect(buttonChooseRigthLanguage, fieldWithOtherLanguage);
 
+// Menus for Mobile
+    function activeMenuForMobile(btn, field) {
+        btn.on("click", function () {
+           field.toggleClass("active");
+        });
+    }
+    activeMenuForMobile($(".nav_main__button"), $(".nav_menu_mobile"));
+    activeMenuForMobile($(".bl_search__button"), $(".bl_search"));
+
 
 //    Discount Products  - Скидки
     /*

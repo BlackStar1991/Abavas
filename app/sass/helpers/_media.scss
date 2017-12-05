@@ -6,74 +6,134 @@
 /* Large Devices, Wide Screens 1280px */
 @media only screen and (max-width: 1200px) {
 
-  .bl_navGroup{
+  .bl_navGroup {
     margin-left: 0;
   }
-  .bl_navGroup__link.active{
+  .bl_navGroup__link.active {
     border-top-color: transparent;
     border-bottom: 3px solid $color_yellow;
   }
-  .btn_callBack{
-    float: right;
+  .btn_callBack {
+    margin-left: 0;
+    //float: right;
   }
-  .bl_shopBasket{
-    width:initial;
+  .bl_shopBasket {
+    width: initial;
     margin-right: 0;
-    float: none;
+    //float: none;
   }
-  .bl_phones{
+  .bl_phones {
     clear: both;
     margin-right: 0;
   }
 }
+
 /* Medium Devices, Desktops 992px */
 @media only screen and (max-width: 991px) {
-  .nav_menu_mobile{
+
+  $transit: all, .6s ease-in;
+
+  .nav_menu_mobile {
     position: absolute;
-    top:35px;
-    left: 0;
+    top: 35px;
+    left: -100%;
+    transition: $transit;
     max-width: 320px;
     background-color: #000;
     z-index: 10;
   }
-  .nav_main{
+  .nav_menu_mobile.active {
+    left: 0;
+    transition: $transit;
+  }
+
+  .nav_main {
     text-align: center;
   }
-  .bl_mainControls{
+  .bl_mainControls {
+    display: inline-block;
     float: none;
-    width: calc(100% - 35px);
+    width: calc(100% - 55px);
   }
-  .bl_personalRoom{
-    margin:0 auto;
+  .bl_personalRoom {
+    margin: 0 auto;
     border-bottom: 1px solid #cfcbbe;
   }
-  .nav_main__item{
+  .nav_main__item {
     display: block;
     margin: 0 auto 10px;
   }
-  .nav_main__link{
+  .nav_main__link {
     color: #fff;
   }
-  .bl_search{
-    float: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-  .bl_search .bl_wrappen{
-    position: absolute;
 
+  .bl_search {
+    position: absolute;
+    top: 35px;
+
+    right: -100%;
+    float: none;
+    width: 200px;
+    background-color: #fff;
+    transition: $transit;
+    z-index: 5;
   }
+  .bl_search.active {
+    right: 0;
+    transition: $transit;
+  }
+  .bl_navigation__footer{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+
+  .bl_search__field {
+    padding-right: 30px;
+    max-width: none;
+  }
+  .icon-search {
+    width: 30px;
+  }
+
+  .bl_navigation__full{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .bl_navigation__item{
+    width:auto;
+  }
+
+
+  .bl_phones__footer,
+  .bl_subdcribe{
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+
 
 }
+
 /* Small Devices, Tablets 768px */
 @media only screen and (max-width: 768px) {
 
 }
+
+@media only screen and (max-width: 600px) {
+  .bl_callback {
+    width: auto;
+  }
+}
+
 /* Extra Small Devices, Phones 480px */
 @media only screen and (max-width: 480px) {
 
 }
+
 /* Custom, iPhone Retina 320px */
 @media only screen and (max-width: 320px) {
 

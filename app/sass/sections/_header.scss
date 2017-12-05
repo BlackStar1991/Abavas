@@ -127,6 +127,11 @@
   line-height: 35px;
 }
 
+.bl_mainControls__mobile{
+  padding-right: 0!important;
+}
+
+
 .bl_personalRoom {
   position: relative;
   width: 150px;
@@ -445,17 +450,16 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
   background-color: $color_headerSecond;
   z-index:12;
 }
 .bl_search__button{
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 35px;
-  height: 35px;
+  position: relative;
+  float: right;
+  width: 36px;
+  height: 36px;
   background-color: $color_headerSecond;
   z-index:12;
 }

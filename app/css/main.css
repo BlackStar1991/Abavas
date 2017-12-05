@@ -1078,6 +1078,9 @@ textarea::-moz-focus-inner {
   position: relative;
   line-height: 35px; }
 
+.bl_mainControls__mobile {
+  padding-right: 0 !important; }
+
 .bl_personalRoom {
   position: relative;
   width: 150px;
@@ -1339,17 +1342,16 @@ textarea::-moz-focus-inner {
   position: fixed;
   left: 0;
   top: 0;
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
   background-color: #191919;
   z-index: 12; }
 
 .bl_search__button {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 35px;
-  height: 35px;
+  position: relative;
+  float: right;
+  width: 36px;
+  height: 36px;
   background-color: #191919;
   z-index: 12; }
 
@@ -1494,7 +1496,7 @@ a.bl_socLinks__circle {
   height: 34px;
   border-radius: 50%;
   background-color: #7f7868;
-  margin-right: 19px;
+  margin-right: 9%;
   display: inline-block; }
   a.bl_socLinks__circle:hover, a.bl_socLinks__circle:focus {
     background-color: #ffd608; }
@@ -1690,11 +1692,10 @@ a.bl_socLinks__circle {
     border-top-color: transparent;
     border-bottom: 3px solid #ffd608; }
   .btn_callBack {
-    float: right; }
+    margin-left: 0; }
   .bl_shopBasket {
     width: initial;
-    margin-right: 0;
-    float: none; }
+    margin-right: 0; }
   .bl_phones {
     clear: both;
     margin-right: 0; } }
@@ -1704,15 +1705,20 @@ a.bl_socLinks__circle {
   .nav_menu_mobile {
     position: absolute;
     top: 35px;
-    left: 0;
+    left: -100%;
+    transition: all, 0.6s ease-in;
     max-width: 320px;
     background-color: #000;
     z-index: 10; }
+  .nav_menu_mobile.active {
+    left: 0;
+    transition: all, 0.6s ease-in; }
   .nav_main {
     text-align: center; }
   .bl_mainControls {
+    display: inline-block;
     float: none;
-    width: calc(100% - 35px); }
+    width: calc(100% - 55px); }
   .bl_personalRoom {
     margin: 0 auto;
     border-bottom: 1px solid #cfcbbe; }
@@ -1722,13 +1728,46 @@ a.bl_socLinks__circle {
   .nav_main__link {
     color: #fff; }
   .bl_search {
+    position: absolute;
+    top: 35px;
+    right: -100%;
     float: none;
-    position: fixed;
-    top: 0;
-    right: 0; }
-  .bl_search .bl_wrappen {
-    position: absolute; } }
+    width: 200px;
+    background-color: #fff;
+    transition: all, 0.6s ease-in;
+    z-index: 5; }
+  .bl_search.active {
+    right: 0;
+    transition: all, 0.6s ease-in; }
+  .bl_navigation__footer {
+    width: 100%;
+    margin-bottom: 15px; }
+  .bl_search__field {
+    padding-right: 30px;
+    max-width: none; }
+  .icon-search {
+    width: 30px; }
+  .bl_navigation__full {
+    width: 100%;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .bl_navigation__item {
+    width: auto; }
+  .bl_phones__footer,
+  .bl_subdcribe {
+    margin-top: 10px;
+    margin-left: 0; } }
 
 /* Small Devices, Tablets 768px */
+@media only screen and (max-width: 600px) {
+  .bl_callback {
+    width: auto; } }
+
 /* Extra Small Devices, Phones 480px */
 /* Custom, iPhone Retina 320px */
