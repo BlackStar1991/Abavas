@@ -94,7 +94,6 @@
                     </div>
 
 
-
                 </div>
 
             </section>
@@ -123,13 +122,17 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-lg-6 col-lg-pull-3">
-                        <button class="bl_navGroup__button visible-xs" type="button"></button>
+                        <button class="bl_navGroup__button icon-bar visible-xs" type="button"></button>
                         <nav class="bl_navGroup">
                             <ul class="bl_navGroup__full">
-                                <li class="bl_navGroup__item "><a href="#" class="bl_navGroup__link active">Готовые решения</a></li> <!-- Если пользователь на активной странице добавляй класс .active-->
+                                <li class="bl_navGroup__item "><a href="#"
+                                                                  class="bl_navGroup__link active">Готовые решения</a>
+                                </li> <!-- Если пользователь на активной странице добавляй класс .active-->
                                 <li class="bl_navGroup__item"><a href="#" class="bl_navGroup__link">Услуги</a></li>
-                                <li class="bl_navGroup__item"><a href="#" class="bl_navGroup__link">Каталог товаров</a></li>
-                                <li class="bl_navGroup__item"><a href="#" class="bl_navGroup__link">Наши проекты</a></li>
+                                <li class="bl_navGroup__item"><a href="#" class="bl_navGroup__link">Каталог товаров</a>
+                                </li>
+                                <li class="bl_navGroup__item"><a href="#" class="bl_navGroup__link">Наши проекты</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -144,6 +147,24 @@
     <main class="main">
         <div class="mainWrapper">
 
+            <!--mainSlaider-->
+            <div class="bl_mainSlider__full hidden-xs">
+                <ul class="bl_mainSlider owl-carousel">
+                    <!-- Для украинкой версии должны подгружаться другие слайды с админки -->
+                    <li class="bl_mainSlider__item">
+                        <img src="image/mainSlider/mainSlider1.jpg" alt="Abavas main slider">
+                        <a href="#" class="bl_mainSlider__link">
+                            <span class="arrow-link">Подробнее</span></a>
+                    </li>
+                    <li class="bl_mainSlider__item">
+                        <img src="image/mainSlider/mainSlider1.jpg" alt="Abavas main slider">
+                        <a href="#" class="bl_mainSlider__link">
+                            <span class="arrow-link">Подробнее</span></a>
+                    </li>
+                </ul>
+            </div>
+
+
         </div>
     </main>
     <!-- ---------------------------------------- FOOTER --------------------------------------------------------- -->
@@ -152,6 +173,7 @@
             <div class="container">
                 <div class="col-xs-12 col-md-2">
                     <nav class="bl_navigation__footer">
+                        <button class="bl_navigation__show icon-triangle" type="button">Показать навигацию</button>
                         <ul class="bl_navigation__full">
                             <li class="bl_navigation__item"><a href="#" class="classbl_navigation__link">Каталог</a>
                             </li>
@@ -170,7 +192,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-6 col-sm-6 col-md-4">
                     <div class="bl_phones__footer">
                         <a href="tel: +380443626816">+38 (044) 362 68 16</a>
                         <a href="tel: +380689683140">+38 (068) 968 31 40</a>
@@ -188,7 +210,7 @@
                         <p class="text_error hidden">Введите ваш email адресс</p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="bl_adress">
                         <p>Наш адрес:</p>
                         <p>04080, Киев, ул. Хвойки, 21,</p>
@@ -251,30 +273,30 @@
 
 <!-- POPUP BIFORE ADD TO SHOPBAG-->
 
-<div class="popup_likeShopbag hidden">
-    <div class="wrapperBlock">
-        <button class="popup_likeShopbag__close">
-            <i class="fa fa-times decor_icon__close" aria-hidden="true"></i>
-        </button>
-        <p class="popup_likeShopbag__text popup_likeShopbag__text_main">Подтверждение</p>
+<!--<div class="popup_likeShopbag hidden">-->
+<!--<div class="wrapperBlock">-->
+<!--<button class="popup_likeShopbag__close">-->
+<!--<span class="decor_icon__close" aria-hidden="true"></span>-->
+<!--</button>-->
+<!--<p class="popup_likeShopbag__text popup_likeShopbag__text_main">Подтверждение</p>-->
 
-        <div class="popup_likeShopbag__product">
-            <p class="shoppingBasket_product__name">Электро-сеть ываыв ыв аываы аыв аываываыва ываываыва ываываываываыва
-                ываыва</p>
-        </div>
-        <p class="popup_likeShopbag__text  popup_likeShopbag__text_main">добавлен в корзину</p>
+<!--<div class="popup_likeShopbag__product">-->
+<!--<p class="shoppingBasket_product__name">Электро-сеть ываыв ыв аываы аыв аываываыва ываываыва ываываываываыва-->
+<!--ываыва</p>-->
+<!--</div>-->
+<!--<p class="popup_likeShopbag__text  popup_likeShopbag__text_main">добавлен в корзину</p>-->
 
-        <div class="popup_likeShopbag__buttons">
-            <button class="button_buyProduct popup_likeShopbag__continueBuying">
-                <span class="button_buyProduct__text popup_likeShopbag__buttons_text">Продолжить покупки</span>
-            </button>
-            <div class="button_buyProduct popup_likeShopbag__goToShopbag">
-                <a href="#" class="button_buyProduct__text popup_likeShopbag__goToShopbag_text">Оформление заказа</a>
-            </div>
-        </div>
+<!--<div class="popup_likeShopbag__buttons">-->
+<!--<button class="button_buyProduct popup_likeShopbag__continueBuying">-->
+<!--<span class="button_buyProduct__text popup_likeShopbag__buttons_text">Продолжить покупки</span>-->
+<!--</button>-->
+<!--<div class="button_buyProduct popup_likeShopbag__goToShopbag">-->
+<!--<a href="#" class="button_buyProduct__text popup_likeShopbag__goToShopbag_text">Оформление заказа</a>-->
+<!--</div>-->
+<!--</div>-->
 
-    </div>
-</div>
+<!--</div>-->
+<!--</div>-->
 
 
 <script src="libs/jquery.min.js"></script>

@@ -12,6 +12,7 @@
   font-size: 16px;
   a {
     display: block;
+
     font-size: 16px;
     line-height: 22px;
     color: $color_grey2;
@@ -28,11 +29,30 @@
 
 .bl_phones__footer {
   margin-left: 50px;
-  width: 100%;
+  min-width:130px;
 }
 
 .bl_navigation {
   width: 100%;
+}
+
+.bl_navigation__show {
+  display: none;
+  position: relative;
+  padding-right: 20px;
+  background: none;
+  color: $color_yellow;
+  line-height: 20px;
+  text-transform: uppercase;
+  z-index: 2;
+  outline: none;
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.bl_navigation__show.icon-triangle:after {
+  left: 97%;
 }
 
 .bl_navigation__full {
@@ -74,11 +94,9 @@
     font-style: italic;
   }
 
-
   &:focus {
     box-shadow: 0 0 6px $color_yellow;
   }
-
 
 }
 
@@ -112,28 +130,27 @@
       transition: 0.3s all ease;
     }
   }
-  &:focus{
+  &:focus {
     text-decoration: underline;
   }
 }
 
-.bl_subscribe__choose{
+.bl_subscribe__choose {
   position: relative;
-  z-index:2;
+  z-index: 2;
 }
 
-
-.bl_adress{
+.bl_adress {
   width: 100%;
   margin-left: 50px;
 }
 
-.bl_socLinks{
+.bl_socLinks {
   margin-top: 48px;
   margin-left: 50px;
 }
 
-a.bl_socLinks__circle{
+a.bl_socLinks__circle {
   position: relative;
   width: 34px;
   height: 34px;
@@ -142,14 +159,14 @@ a.bl_socLinks__circle{
   margin-right: 9%;
   display: inline-block;
   &:hover,
-  &:focus{
+  &:focus {
     background-color: $color_yellow;
   }
 }
 
-.bl_socLinks__vk{
-  &:after{
-    content:"";
+.bl_socLinks__vk {
+  &:after {
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -159,9 +176,10 @@ a.bl_socLinks__circle{
     background: url("../image/vk.svg") 50% 50% no-repeat;
   }
 }
-.bl_socLinks__facebook{
-  &:after{
-    content:"";
+
+.bl_socLinks__facebook {
+  &:after {
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -171,9 +189,10 @@ a.bl_socLinks__circle{
     background: url("../image/facebook.svg") 50% 50% no-repeat;
   }
 }
-.bl_socLinks__twiter{
-  &:after{
-    content:"";
+
+.bl_socLinks__twiter {
+  &:after {
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -184,21 +203,17 @@ a.bl_socLinks__circle{
   }
 }
 
-
-.bl_map{
+.bl_map {
   width: 100%;
-  max-width:320px;
-  &:focus{
+  max-width: 320px;
+  &:focus {
     box-shadow: 0 0 10px 4px $color_yellow;
   }
-  img{
+  img {
     display: block;
     width: 100%;
   }
 }
-
-
-
 
 .footer_secondPart {
   text-align: center;
@@ -209,13 +224,9 @@ a.bl_socLinks__circle{
   background-color: #181614;
 }
 
-
-
-
 /* CALLBACK FORM */
 
-
-.bl_callback{
+.bl_callback {
   display: block;
   position: fixed;
   top: 50%;
@@ -228,7 +239,6 @@ a.bl_socLinks__circle{
   z-index: 1080;
 }
 
-
 .bl_callback__close {
   position: relative;
   float: right;
@@ -239,14 +249,14 @@ a.bl_socLinks__circle{
   outline: none;
   background: none;
   z-index: 3;
-  &:focus{
+  &:focus {
     box-shadow: 0 0 3px 2px #000;
   }
 
 }
 
-.icon-close{
-  &:after{
+.icon-close {
+  &:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -256,7 +266,7 @@ a.bl_socLinks__circle{
   }
 }
 
-.bl_callback__text{
+.bl_callback__text {
   vertical-align: top;
   display: block;
   text-align: center;
@@ -268,8 +278,6 @@ a.bl_socLinks__circle{
   font-size: 19px;
   font-weight: 700;
 }
-
-
 
 .bl_callback__form {
   clear: both;
@@ -285,13 +293,12 @@ a.bl_socLinks__circle{
   margin: 0 auto 24px;
 }
 
-.bl_callback__form .text_error{
+.bl_callback__form .text_error {
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translate(-50%);
 }
-
 
 .bl_callback__input {
   margin: 52px auto 0;
@@ -304,7 +311,7 @@ a.bl_socLinks__circle{
   border-bottom: 1px solid #191919;
   outline: none;
   background: inherit;
-  &::placeholder{
+  &::placeholder {
     color: #191919;
     font-size: 25px;
   }
@@ -325,14 +332,14 @@ a.bl_socLinks__circle{
   transition: .3s all;
 
   &:hover,
-  &:focus{
+  &:focus {
     transition: .3s all;
     color: #191919;
     background-color: #fff;
   }
 }
 
-.bl_success{
+.bl_success {
   max-width: 352px;
   min-height: 40px;
   margin: 80px auto;

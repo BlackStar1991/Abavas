@@ -1,7 +1,5 @@
 .header {
   width: 100%;
-  min-height: 86px;
-
 }
 
 .heared_firstPart {
@@ -326,6 +324,67 @@
   line-height: 86px;
   margin-left: 3%;
 }
+
+.bl_navGroup.active{
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  .bl_navGroup__full{
+    animation: showNavGroup 0.3s linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+
+
+@keyframes showNavGroup {
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+
+.bl_navGroup__button{
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  right: -50px;
+  top: -160px;
+  background-color: $color_yellow;
+  outline: none;
+  color: #000;
+  z-index: 11;
+}
+
+.icon-bar{
+  &:after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "\2630";
+    color: inherit;
+    font-size:30px;
+  }
+}
+.bl_navGroup__button.icon-bar{
+  &:after{
+    left: 30%;
+    font-weight:900;
+  }
+}
+
+.bl_navGroup__button.icon-close{
+  &:after{
+    left: 30%;
+  }
+}
+
 
 .bl_navGroup__full {
   display: flex;

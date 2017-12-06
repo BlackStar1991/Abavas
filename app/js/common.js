@@ -34,6 +34,48 @@ window.onload = function() {
     activeMenuForMobile($(".bl_search__button"), $(".bl_search"));
 
 
+    var headerNavigationButton = $(".bl_navGroup__button");
+    headerNavigationButton.on("click", function () {
+        $(".bl_navGroup").toggleClass("active");
+        $(this).toggleClass("icon-bar icon-close");
+    });
+
+
+    var btnShowMoreFooterInformation = $(".bl_navigation__show");
+    btnShowMoreFooterInformation.on("click", function () {
+       $(this).toggleClass("active");
+       $(".bl_navigation__full").slideToggle(300);
+
+    });
+
+
+
+    //// Main-slider
+
+    $(".bl_mainSlider").owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        navText: true,
+        dots: true,
+        autoplay: false,
+        stopOnHover: true,
+        // margin: 0,
+        smartSpeed: 1000, //Время движения слайда
+        autoplayTimeout: 4000, //Время смены слайда
+        pagination: false,
+        responsiveClass: true,
+        responsive: {
+            320: {
+                items: 1
+            }
+        }
+    });
+
+
+
+
+
 //    Discount Products  - Скидки
     /*
        $(".slider_discountProducts").owlCarousel({
