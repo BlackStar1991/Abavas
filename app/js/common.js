@@ -1,7 +1,8 @@
 window.onload = function () {
 
     var blackWrapper = $(".blackWrapper"),
-        body = $("body");
+        body = $("body"),
+        active = "active";
 
     ///  sliderEffect
     function sliderEffectForButtons(button, element, duration) {
@@ -48,6 +49,18 @@ window.onload = function () {
         $(".bl_navigation__full").slideToggle(300);
 
     });
+
+    ///// Caterories
+
+    var btnCategories = $(".bl_catalog__btn");
+
+    btnCategories.click(function () {
+        $(this).toggleClass(active);
+        $(this).parent(".bl_catalogs__item").toggleClass(active);
+        $(this).siblings("ul").eq(0).slideToggle(400);
+    });
+
+
 
 
     //// Main-slider

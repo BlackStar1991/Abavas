@@ -268,19 +268,13 @@ textarea {
   }
 }
 
-
-
-
 // OWL
 
 .owl-carousel {
   z-index: 2;
 }
 
-
-
 /////////// OWL
-
 
 .owl-carousel .owl-nav {
   position: absolute;
@@ -293,7 +287,7 @@ textarea {
   z-index: 999;
 
   .owl-prev,
-  .owl-next{
+  .owl-next {
 
     position: absolute;
     left: 0;
@@ -312,36 +306,35 @@ textarea {
       transform: translate(-50%, -50%);
       @include sprite($arrow-left);
     }
-    &:hover{
+    &:hover {
       transition: all 0.2s;
       background-color: $color_dark;
-      &:before{
+      &:before {
         @include sprite-position($arrow-left-hover);
       }
     }
   }
-  .owl-next{
+  .owl-next {
     left: auto;
     right: 0;
-    &:before{
+    &:before {
       @include sprite($arrow-right);
     }
-    &:hover{
+    &:hover {
       transition: all 0.2s;
       background-color: $color_dark;
-      &:before{
+      &:before {
         @include sprite-position($arrow-right-hover);
       }
     }
 
   }
 }
+
 //corrected
-.bl_sliderPartners.owl-carousel .owl-nav .owl-prev{
+.bl_sliderPartners.owl-carousel .owl-nav .owl-prev {
   left: -54px;
 }
-
-
 
 ///////// corrected OwlSlider
 .owl-carousel.bl_mainSlider .owl-nav {
@@ -350,11 +343,11 @@ textarea {
   top: auto;
   transform: none;
   left: 19%;
-  width:110px;
+  width: 110px;
   height: 50px;
 
   .owl-prev,
-  .owl-next{
+  .owl-next {
     float: left;
     position: relative;
     display: inline-block;
@@ -365,17 +358,16 @@ textarea {
     line-height: 1;
     font-size: 38px;
     transition: all 0.2s;
-    z-index:3;
+    z-index: 3;
 
-    &:hover{
+    &:hover {
       transition: all 0.2s;
       background-color: $color_dark;
-      &:before{
+      &:before {
         @include sprite-position($arrow-left-hover);
       }
     }
-    
-    
+
     &:before {
       content: "";
       position: absolute;
@@ -387,13 +379,13 @@ textarea {
     }
   }
 
-  .owl-next{
+  .owl-next {
 
     &:before {
       @include sprite($arrow-right);
     }
-    &:hover{
-      &:before{
+    &:hover {
+      &:before {
         @include sprite-position($arrow-right-hover);
       }
     }
@@ -405,7 +397,7 @@ textarea {
   bottom: 15px;
   left: 29.8%;
   transform: translateX(-50%);
-  z-index:2;
+  z-index: 2;
   .owl-dot {
     display: inline-block;
     width: 38px;
@@ -420,24 +412,18 @@ textarea {
 
 }
 
-.bl_sliderHits.owl-carousel .owl-item img{
-  max-width:235px;
+.bl_sliderHits.owl-carousel .owl-item img {
+  max-width: 235px;
 }
 
-
-
-
-
-
-
 ///////
-.bl_ourWorks__inner{
+.bl_ourWorks__inner {
   width: 100%;
-  min-height:254px;
+  min-height: 254px;
   background-color: $color_lightGrey;
 }
 
-.bl_ourWorks{
+.bl_ourWorks {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -445,18 +431,18 @@ textarea {
   text-align: center;
 }
 
-.bl_ourWorks__item{
+.bl_ourWorks__item {
   position: relative;
   width: 33.33%;
-  &:nth-of-type(1){
+  &:nth-of-type(1) {
     background: url("../image/bg_elements/ourWorks_1.png") no-repeat;
-    background-size:cover;
+    background-size: cover;
   }
-  &:nth-of-type(2){
+  &:nth-of-type(2) {
     background: url("../image/bg_elements/ourWorks_2.png") no-repeat;
-    background-size:cover;
+    background-size: cover;
     &:before,
-    &:after{
+    &:after {
       content: "";
       position: absolute;
       top: 50%;
@@ -465,30 +451,28 @@ textarea {
       width: 8px;
       height: 65px;
       background-color: $color_yellow;
-      z-index:3;
+      z-index: 3;
     }
-    &:after{
+    &:after {
       left: auto;
       right: -8px;
     }
   }
-  &:nth-of-type(3){
+  &:nth-of-type(3) {
     background: url("../image/bg_elements/ourWorks_3.png") no-repeat;
-    background-size:cover;
+    background-size: cover;
   }
 }
 
-
-
-.bl_ourWorks__icon{
+.bl_ourWorks__icon {
   position: relative;
   width: 60px;
   height: 60px;
-  margin:50px auto 0;
+  margin: 50px auto 0;
 }
 
-.icon-barcode-scanner{
-  &:after{
+.icon-barcode-scanner {
+  &:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -497,8 +481,9 @@ textarea {
     @include sprite($icon-barcode-scanner);
   }
 }
-.icon-like{
-  &:after{
+
+.icon-like {
+  &:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -508,8 +493,8 @@ textarea {
   }
 }
 
-.icon-operator-avatar{
-  &:after{
+.icon-operator-avatar {
+  &:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -519,7 +504,7 @@ textarea {
   }
 }
 
-.bl_ourWorks__title{
+.bl_ourWorks__title {
   margin-top: 30px;
   color: $color_dark;
   font-size: 24px;
@@ -527,8 +512,8 @@ textarea {
   text-transform: uppercase;
 }
 
-.bl_ourWorks__text{
-  max-width:240px;
+.bl_ourWorks__text {
+  max-width: 240px;
   margin: 30px auto 0;
   color: #4a4a4a;
   font-size: 18px;
@@ -536,71 +521,72 @@ textarea {
 
 ///////////////////
 
-
-.bl_sliderPartners__inner{
+.bl_sliderPartners__inner {
   width: 100%;
   margin: 90px auto;
   text-align: center;
 }
 
-.bl_sliderPartners__text{
+.bl_sliderPartners__text {
   color: $color_dark;
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.bl_sliderPartners{
+.bl_sliderPartners {
 
   margin-top: 57px;
   padding-left: 54px;
 
 }
-.bl_sliderPartners .owl-stage-outer{
+
+.bl_sliderPartners .owl-stage-outer {
 
 }
 
-
-.bl_sliderPartners__link{
+.bl_sliderPartners__link {
   display: flex;
   flex-direction: column;
-  min-height:160px;
+  min-height: 160px;
   justify-content: center;
 }
-.owl-carousel .bl_sliderPartners__link img{
+
+.owl-carousel .bl_sliderPartners__link img {
   max-width: 140px;
 }
 
 ///////
 
-.bl_aboutShop__inner{
+.bl_aboutShop__inner {
 
   clear: both;
   width: 100%;
-  min-height:600px;
+  min-height: 600px;
   background: #f9f9f9 url("../image/bg_elements/bg_aboutShop.png") 100% 50% no-repeat;
 }
-.bl_aboutShop__wrapper{
+
+.bl_aboutShop__wrapper {
   position: relative;
   width: 100%;
   height: 100%;
   margin: 52px auto;
 }
 
-.bl_aboutShop{
+.bl_aboutShop {
   padding: 65px 0;
   margin-left: 9%;
   box-sizing: border-box;
 }
 
-.bl_aboutShop__title{
+.bl_aboutShop__title {
   color: $color_dark;
   font-size: 26px;
   font-weight: 700;
   line-height: 26px;
 }
 
-.bl_aboutShop__text{
+.bl_aboutShop__text {
   margin-top: 30px;
   color: $color_dark;
   font-size: 18px;
@@ -608,7 +594,7 @@ textarea {
   line-height: 23px;
 }
 
-.decor-bracket{
+.decor-bracket {
   position: absolute;
   top: 0;
   left: 0;
@@ -620,8 +606,7 @@ textarea {
   border-bottom: 10px solid $color_yellow;
 }
 
-
-.slider_name{
+.slider_name {
   text-align: center;
   color: $color_dark;
   font-family: $Calibri;
@@ -632,44 +617,42 @@ textarea {
 
 ////////// HITS
 
-.bl_sliderHits__full{
+.bl_sliderHits__full {
   margin-top: 77px;
   width: 100%;
 }
 
-.bl_sliderHits{
+.bl_sliderHits {
   width: 100%;
 
   margin-top: 66px;
   margin-bottom: 66px;
 }
-.bl_slider__item{
+
+.bl_slider__item {
   width: 100%;
   max-width: 310px;
   padding: 24px;
   display: inline-block;
   //border: 1px solid #000;
   box-sizing: border-box;
-  &:hover{
+  &:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
   }
 }
 
-
-
-.bl_slider__link{
+.bl_slider__link {
   display: block;
   width: 100%;
   //height: 300px;
 }
 
-
-.bl_slider__img{
+.bl_slider__img {
   display: block;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
-.bl_slider__name{
+.bl_slider__name {
   width: 100%;
   height: 50px;
   margin-top: 18px;
@@ -681,12 +664,12 @@ textarea {
   border-bottom: 1px solid #ececec;
 }
 
-.bl_shortReviews{
+.bl_shortReviews {
   margin-top: 14px;
-  height:20px;
+  height: 20px;
   width: 100%;
 
-  div{
+  div {
     position: relative;
     float: left;
     width: 14px;
@@ -696,11 +679,9 @@ textarea {
   }
 }
 
-
-
 .icon_star__full,
-.icon_star__empty{
-  &:after{
+.icon_star__empty {
+  &:after {
     content: "\2605";
     position: absolute;
     top: 50%;
@@ -710,16 +691,17 @@ textarea {
     font-size: 24px;
   }
 }
-.icon_star__empty{
-  &:after{
+
+.icon_star__empty {
+  &:after {
     content: "\2606";
   }
 }
 
-.bl_shortAtributes{
+.bl_shortAtributes {
   clear: both;
   width: 100%;
-  height:70px;
+  height: 70px;
   overflow: hidden;
   margin-top: 14px;
   color: $color_grey2;
@@ -729,20 +711,19 @@ textarea {
 
 }
 
-.bl_slider__wrapperPrice{
+.bl_slider__wrapperPrice {
   width: 100%;
 
 }
 
-
-.bl_slider__price{
+.bl_slider__price {
   height: 40px;
   display: inline;
 
 }
 
 .bl_slider__normalPrice,
-.bl_slider__newPrice{
+.bl_slider__newPrice {
   color: $color_dark;
   font-family: $Calibri;
   font-size: 27px;
@@ -752,17 +733,238 @@ textarea {
   vertical-align: bottom;
 }
 
-.bl_slider__oldPrice{
+.bl_slider__oldPrice {
   vertical-align: bottom;
   color: $color_grey2;
-  text-decoration:line-through;
+  text-decoration: line-through;
 }
 
-.bl_slider__newPrice{
+.bl_slider__newPrice {
 
   font-size: 26px;
   margin-top: 2px;
 }
+
+///////////// Breadcrumbs
+
+.bl_breadcrumbs {
+  margin-top: 20px; //////////////////// 14px
+  margin-bottom: 20px;
+  width: 100%;
+  &__item {
+    position: relative;
+    display: inline-block;
+    padding-right: 2%;
+    color: $color_breadcrambs;
+    &:not(:last-child):after {
+      content: ">";
+      position: absolute;
+      top: 0;
+      right: 4px;
+      color: inherit;
+      z-index: 3;
+    }
+  }
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $color_dark;
+    }
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  &__active {
+    display: inline-block;
+    text-decoration: none;
+    color: $color_dark;
+  }
+
+}
+
+//////////////
+
+// Catalog
+
+.catalog_name {
+  position: relative;
+  width: 100%;
+  color: #000;
+  font-family: $Calibri;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 92px;
+  text-transform: uppercase;
+  background-color: $color_yellow;
+  &:before {
+    content: "";
+    position: absolute;
+    left: -200%;
+    height: 100%;
+    width: 200%;
+    background-color: $color_yellow;
+
+  }
+}
+
+.bl_catalog {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.bl_catalog__button {
+
+  padding: 20px 0;
+  color: $color_dark;
+  font-family: $Calibri;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  text-transform: uppercase;
+  outline: none;
+  background: none;
+  cursor: default;
+}
+
+.bl_catalog__full {
+  margin-top: 20px;
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.bl_catalog__item {
+  width: 102%;
+  font-size: 0;
+}
+
+.bl_catalog__link {
+  font-family: $Calibri;
+  font-size: 18px;
+  line-height: 32px;
+  color: $color_dark;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: $color_yellow;
+  }
+}
+
+.bl_catalog__item.active .bl_catalog__link {
+  color: #515151;
+  &:hover{
+    color: $color_yellow;
+  }
+}
+
+.bl_catalog__item.active > .bl_catalog__link {
+  color: #f1b500;
+}
+
+.bl_catalog__item.active > .bl_catalog__subCatalog {
+  padding-left: 15px;
+}
+
+.bl_catalog__btn {
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  font-size: 0;
+  width: 20px;
+  height: 100%;
+  min-height: 20px;
+  color: inherit;
+  outline:none;
+  background: none;
+
+
+  &:after {
+    content: "▶";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 65%;
+    left: 50%;
+    color: inherit;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: all, .3s;
+    font-size: 12px;
+  }
+}
+
+.bl_catalog__btn.active{
+  &:after{
+    transition: all, .3s;
+    transform: translate(-50%, -50%) rotate(90deg);
+    color: #f1b500;
+  }
+}
+
+
+/////////
+.bl_help{
+  width: 100%;
+  margin-top: 30px;
+  color: #696969;
+  font-family: $Calibri;
+  font-size: 18px;
+}
+.bl_help p {
+  color: #696969;
+  font-size: 18px;
+  line-height: 23px;
+  &:nth-child(2){
+    margin-top: 20px;
+  }
+}
+
+.bl_help__tel{
+  margin-top: 20px;
+}
+
+.bl_help__tel a{
+  margin-top: 5px;
+  display: block;
+  color: #696969;
+  font-size: 18px;
+  line-height: 23px;
+  &:hover,
+  &:focus{
+    text-decoration: underline;
+  }
+}
+
+
+
+.bl_help__callBack{
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 162px;
+  height: 50px;
+  border: 2px solid $color_dark;
+  color: $color_dark;
+  font-family: $Calibri;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  text-transform: uppercase;
+  background-color: #fff;
+  &:hover,
+  &:focus{
+    background-color: $color_yellow;
+    border-color: $color_yellow;
+  }
+}
+
+
+
+
 
 
 /*********************************************/
