@@ -181,7 +181,7 @@ textarea {
   height: 100%;
   padding: 0;
   margin: 0 !important;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 .icon-triangle {
@@ -227,7 +227,7 @@ textarea {
   text-align: center;
   left: 19%;
   bottom: 23%;
-  width: 8.8%;
+  width: 164px;
   height: 47px;
   border: 3px solid $color_dark;
   box-sizing: border-box;
@@ -276,6 +276,8 @@ textarea {
 .owl-carousel {
   z-index: 2;
 }
+
+
 
 /////////// OWL
 
@@ -418,7 +420,9 @@ textarea {
 
 }
 
-
+.bl_sliderHits.owl-carousel .owl-item img{
+  max-width:235px;
+}
 
 
 
@@ -642,7 +646,7 @@ textarea {
 .bl_slider__item{
   width: 100%;
   max-width: 310px;
-  padding: 24px 65px;
+  padding: 24px;
   display: inline-block;
   //border: 1px solid #000;
   box-sizing: border-box;
@@ -656,6 +660,7 @@ textarea {
 .bl_slider__link{
   display: block;
   width: 100%;
+  //height: 300px;
 }
 
 
@@ -678,7 +683,7 @@ textarea {
 
 .bl_shortReviews{
   margin-top: 14px;
-  min-height:14px;
+  height:20px;
   width: 100%;
 
   div{
@@ -702,7 +707,7 @@ textarea {
     left: 50%;
     transform: translate(-50%, -50%);
     color: $color_yellow;
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 .icon_star__empty{
@@ -714,7 +719,7 @@ textarea {
 .bl_shortAtributes{
   clear: both;
   width: 100%;
-  height:100px;
+  height:70px;
   overflow: hidden;
   margin-top: 14px;
   color: $color_grey2;
@@ -724,12 +729,16 @@ textarea {
 
 }
 
+.bl_slider__wrapperPrice{
+  width: 100%;
+
+}
 
 
 .bl_slider__price{
-  width: 100%;
-  vertical-align: bottom;
   height: 40px;
+  display: inline;
+
 }
 
 .bl_slider__normalPrice,
@@ -739,16 +748,18 @@ textarea {
   font-size: 27px;
   font-weight: 700;
   line-height: 18px;
+  text-align: left;
+  vertical-align: bottom;
 }
 
 .bl_slider__oldPrice{
-  text-align: right;
+  vertical-align: bottom;
   color: $color_grey2;
   text-decoration:line-through;
 }
 
 .bl_slider__newPrice{
-  text-align: right;
+
   font-size: 26px;
   margin-top: 2px;
 }

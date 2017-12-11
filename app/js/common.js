@@ -66,8 +66,13 @@ window.onload = function () {
         pagination: false,
         responsiveClass: true,
         responsive: {
+            992: {
+                items: 1,
+                dots: true
+            },
             320: {
-                items: 1
+                items: 1,
+                dots: false
             }
         }
     });
