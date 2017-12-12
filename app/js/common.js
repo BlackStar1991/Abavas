@@ -68,9 +68,6 @@ window.onload = function () {
         });
     });
 
-
-
-
     var btnCategories = $(".bl_catalog__btn");/// min button
 
     btnCategories.click(function () {
@@ -78,6 +75,14 @@ window.onload = function () {
         $(this).parent(".bl_catalogs__item").toggleClass(active);
         $(this).siblings("ul").eq(0).slideToggle(400);
     });
+
+////////// FILTERS
+    var btnFilters =$(".bl_filters__btn");
+    btnFilters.click(function () {
+        $(this).toggleClass(active);
+        $(this).next(".bl_filters__section").slideToggle(400);
+    });
+
 
 
 

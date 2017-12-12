@@ -832,7 +832,7 @@ textarea {
   width: 100%;
 }
 
-.bl_catalog__button {
+.bl_catalog__button, .bl_filters__button{
   position: relative;
   padding: 20px 20% 20px 0;
   color: $color_dark;
@@ -884,10 +884,13 @@ textarea {
   line-height: 32px;
   color: $color_dark;
   font-weight: 700;
-
-  &:hover,
-  &:focus {
+  &:hover{
     color: $color_yellow;
+  }
+  &:focus{
+    outline: none;
+    color: $color_yellow!important;
+    text-decoration: underline;
   }
 }
 
@@ -913,11 +916,14 @@ textarea {
   font-size: 0;
   width: 20px;
   height: 100%;
+  border-radius: 50%;
   min-height: 20px;
   color: inherit;
   outline:none;
   background: none;
-
+  &:focus{
+    box-shadow: 0 0 2px 1px $color_yellow;
+  }
 
   &:after {
     content: "▶";
@@ -1144,6 +1150,207 @@ $transition-box: 0.4s all ease-in;
 .bl_ceo.correctedML{
   margin-left: 8%;
 }
+
+
+
+//////////////// Filters
+
+
+.bl_filters__item{
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.bl_filters__name{
+  display: inline-block;
+  font-family: $Calibri;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-transform: uppercase;
+  &:hover,
+  &:focus{
+    color: $color_yellow;
+  }
+}
+
+
+
+
+
+.bl_filters__section {
+
+}
+
+.bl_filters__btn {
+  position: relative;
+  float: right;
+  margin-top: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  outline: none;
+  background: transparent;
+  &:focus{
+    box-shadow: 0 0 2px 1px $color_yellow;
+  }
+
+  &:after {
+    position: absolute;
+    content: "►";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform .3s;
+
+    font-size: 10px;
+    color: inherit;
+
+  }
+  &.active{
+    &:after{
+      transform: translate(-50%, -50%) rotate(90deg);
+      transition: transform .3s;
+    }
+  }
+
+}
+
+.bl_filters__lable {
+  position: relative;
+  display: block;
+
+  min-height: 36px;
+  width: 100%;
+}
+
+.bl_filters__input {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.filter_text {
+  margin-left: 25px;
+  color: #505050;
+  font-family: $Calibri;
+  font-size: 18px;
+  position: relative;
+  display: block;
+  width: 100%;
+  outline: none;
+  &:hover {
+    color: $color_yellow;
+  }
+  &:focus{
+    color: $color_yellow;
+    text-decoration: underline;
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 8px;
+    width: 11px;
+    height: 11px;
+    box-sizing: border-box;
+    border: 1px solid #505050;
+  }
+  span {
+    font-weight: bold;
+  }
+}
+
+.bl_filters__input:checked + .filter_text {
+  font-weight: bold;
+  color: $color_yellow;
+
+  &:after{
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    background-color: #ffc808;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+}
+
+
+//////////////////// Catalog
+
+
+.bl_catalog{
+  width: 100%;
+}
+
+
+.bl_catalog__controls{
+  width: 100%;
+}
+
+.bl_view{
+  width: 120px;
+  height: 36px;
+  border: 1px solid #f00;
+}
+
+
+.name_controls{
+  vertical-align: top;
+  color: #3f4245;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+
+.bl_view__label{
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  border: 1px solid #000;
+  cursor: pointer;
+
+  input{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+}
+
+.icon-grid{
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include sprite($icon-view-grid-hover);
+  }
+}
+
+.icon-list{
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include sprite($icon-view-list);
+  }
+}
+
+
 
 
 /*********************************************/
