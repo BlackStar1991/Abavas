@@ -3,6 +3,7 @@ window.onload = function () {
     var blackWrapper = $(".blackWrapper"),
         body = $("body"),
         active = "active";
+    var $window = $(window);
 
     ///  sliderEffect
     function sliderEffectForButtons(button, element, duration) {
@@ -37,22 +38,40 @@ window.onload = function () {
 
 
     var headerNavigationButton = $(".bl_navGroup__button");
-    headerNavigationButton.on("click", function () {
+        headerNavigationButton.on("click", function () {
         $(".bl_navGroup").toggleClass("active");
         $(this).toggleClass("icon-bar icon-close");
     });
 
 
     var btnShowMoreFooterInformation = $(".bl_navigation__show");
-    btnShowMoreFooterInformation.on("click", function () {
+        btnShowMoreFooterInformation.on("click", function () {
         $(this).toggleClass("active");
         $(".bl_navigation__full").slideToggle(300);
 
     });
 
     ///// Caterories
+    var btnMobileCategories = $(".bl_catalog__button"),
+        fieldCategories = $(".bl_catalog__full");
 
-    var btnCategories = $(".bl_catalog__btn");
+
+
+
+    btnMobileCategories.each(function(){
+        $(this).on({
+            click: function (){
+                if ($window.width() <= 991) {
+                    fieldCategories.slideToggle(400);
+                }
+            }
+        });
+    });
+
+
+
+
+    var btnCategories = $(".bl_catalog__btn");/// min button
 
     btnCategories.click(function () {
         $(this).toggleClass(active);

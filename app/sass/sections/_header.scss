@@ -1,12 +1,15 @@
 .header {
   width: 100%;
+  min-height: 130px;
+  overflow: hidden;
 }
 
 .heared_firstPart {
   position: relative;
   width: 100%;
-  min-height: 35px;
+
   background-color: $color_headerFirst;
+
 }
 
 .nav_main {
