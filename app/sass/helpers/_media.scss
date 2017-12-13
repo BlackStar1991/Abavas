@@ -42,6 +42,18 @@
     margin-left:0;
     margin-right: 0;
   }
+
+
+
+
+
+  .view-gride .bl_slider__item{
+    max-width:216px;
+  }
+  .view-gride .bl_slider__normalPrice, .view-gride .bl_slider__newPrice{
+    font-size: 24px;
+  }
+
 }
 
 /* Medium Devices, Desktops 992px */
@@ -161,7 +173,9 @@
     }
   }
 
-  .bl_catalog__button {
+  .bl_catalog__button,
+  .bl_filters__button
+  {
     border: 2px solid $color_yellowDark;
     margin: 0 auto;
     padding: 20px;
@@ -169,6 +183,10 @@
     display: block;
     border-radius: 14px;
   }
+  .bl_filters__button{
+    margin: 15px auto;
+  }
+
 
   .bl_catalog__full{
     display: none;
@@ -190,21 +208,32 @@
     padding-right: 30px;
   }
 
+  .bl_filters__name{
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin:0 auto;
 
+  }
 
-  .bl_catalog__btn {
+  .bl_catalog__btn,
+  .bl_filters__btn{
     position: absolute;
     right: 0;
     top: 0;
     width: 30px;
     height: 30px;
+    border-radius: 0;
     display: block;
     background-color: $color_grey;
     &:after {
       width: 100%;
       left: 50%;
+      font-size: 12px;
+      color: $color_yellow;
     }
   }
+
 
   .bl_catalog__item.active > .bl_catalog__subCatalog {
     padding-left: 0;
@@ -229,6 +258,12 @@
 
 
 
+  .bl_products, .bl_products + .bl_pagination{
+    margin-left: 0;
+  }
+  .view-gride .bl_slider__item{
+    max-width:222px;
+  }
 
   .bl_phones__footer,
   .bl_subdcribe {
@@ -263,6 +298,20 @@
 
   .bl_navGroup__item {
     display: block;
+    text-align: center;
+  }
+
+  .view-gride .bl_slider__item:nth-of-type(3n - 1){
+    margin-left:0;
+    margin-right: 0;
+  }
+
+  .view-gride .bl_slider__item{
+    width: 50%;
+    max-width:276px;
+  }
+
+  .view-gride .bl_slider__name{
     text-align: center;
   }
 
@@ -308,6 +357,14 @@
     width: auto;
   }
 
+  .view-gride .bl_slider__item{
+    width: 100%;
+    max-width:initial;
+  }
+
+  .view-gride .btn_buy{
+    width: 30vw;
+  }
 
 }
 

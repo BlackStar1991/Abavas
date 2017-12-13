@@ -151,7 +151,8 @@
                 <div class="col-xs-12 hidden-xs">
                     <ul class="bl_breadcrumbs">
                         <li class="bl_breadcrumbs__item"><a class="bl_breadcrumbs__link" href="#">Главная</a></li>
-                        <li class="bl_breadcrumbs__item"><a class="bl_breadcrumbs__link" href="#">Торговое оборудование</a></li>
+                        <li class="bl_breadcrumbs__item"><a class="bl_breadcrumbs__link"
+                                                            href="#">Торговое оборудование</a></li>
                         <li class="bl_breadcrumbs__item"><p class="bl_breadcrumbs__link bl_breadcrumbs__active">
                             POS-компьютеры</p></li>
                     </ul>
@@ -179,7 +180,8 @@
 
                                 <!-- Добавляй к классу bl_catalog__item класс active если пользоователь перешёл по ссылке на данную категорию -->
                                 <ul class="bl_catalog__subCatalog">
-                                    <li class="bl_catalog__item active"><a href="#" class="bl_catalog__link">POS-компьютеры</a>
+                                    <li class="bl_catalog__item active"><a href="#"
+                                                                           class="bl_catalog__link">POS-компьютеры</a>
                                     </li>
                                     <li class="bl_catalog__item"><a href="#" class="bl_catalog__link">POS-мониторы</a>
                                     </li>
@@ -244,7 +246,7 @@
                     <!---->
 
                     <!-- FILTERS -->
-                    
+
                     <div class="bl_filters">
                         <button class="bl_filters__button" type="button">Фильтр</button>
                         <div class="bl_filters__full">
@@ -259,10 +261,11 @@
                             </div>
                             <div class="bl_filters__item">
                                 <p class="bl_filters__name">Производитель:</p>
-                                <button class="bl_filters__btn" type="button"></button>
+                                <button class="bl_filters__btn active" type="button"></button>
                                 <div class="bl_filters__section">
                                     <label class="bl_filters__lable">
-                                        <input class="bl_filters__input" type="checkbox" name="" title="Posiflex" checked>
+                                        <input class="bl_filters__input" type="checkbox" name="" title="Posiflex"
+                                               checked>
                                         <a class="filter_text" href="#">Posiflex
                                             <span>(71)</span></a>
                                     </label>
@@ -284,7 +287,6 @@
                     </div>
 
 
-
                     <!--   -->
                     <div class="bl_help hidden-xs">
                         <p>Нужна помошь в выборе?</p>
@@ -301,25 +303,386 @@
                     </div>
 
                 </div>
-                <div class="col-xs-12 col-md-9">
+                <div class="col-xs-12 col-md-9 correct_right">
                     <div class="bl_catalog">
                         <div class="bl_catalog__controls clearfix">
 
-                            <div class="bl_view">
+                            <div class="bl_view hidden-xs">
+                                <input id="grid-view" type="radio" name="view" checked>
+                                <input id="list-view" type="radio" name="view">
                                 <span class="name_controls">Вид:</span>
-                                <label class="bl_view__label icon-grid js-grid">
-                                    <input type="radio" name="view">
-                                </label>
-                                <label class="bl_view__label icon-list js-list">
-                                    <input type="radio" name="view">
-                                </label>
+                                <label class="bl_view__label icon-grid js-grid" for="grid-view"></label>
+                                <label class="bl_view__label icon-list js-list" for="list-view"></label>
                             </div>
+
+
+                            <label class="bl_sorted">
+                                <span class="name_controls">Сортировка:</span>
+                                <select class="bl_sorted__select" onchange="location = this.value;">
+                                    <option value="" selected="selected">По цене от высоких</option>
+                                    <option value="">По цене от низких</option>
+                                    <option value="">По популярности</option>
+                                </select>
+                            </label>
+
+
+                            <ul class="bl_products clearfix view-gride">
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_1.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-3600</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong> VIA Nano 1.6ГГц</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <!--<p class="bl_slider__normalPrice">10299 грн.</p>-->
+                                            <p class="bl_slider__oldPrice">10299 грн.</p>
+                                            <p class="bl_slider__newPrice">9299 грн.</p>
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+
+                                </li>
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_2.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <p class="bl_slider__normalPrice">10299 грн.</p>
+                                            <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                            <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+                                </li>
+                                <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/cat/prod_3.png" alt="">
+                                    <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__empty"></div>
+                                    <div class="icon_star__empty"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!-- выводить не больше 5 атрибутов -->
+                                    <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                    <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                </ul>
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <p class="bl_slider__normalPrice">10299 грн.</p>
+                                        <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                        <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                    </div>
+                                    <button class="btn_buy" type="button">купить</button>
+                                </div>
+                            </li>
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_4.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <p class="bl_slider__normalPrice">10299 грн.</p>
+                                            <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                            <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+                                </li>
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_5.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <p class="bl_slider__normalPrice">10299 грн.</p>
+                                            <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                            <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+                                </li>
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_6.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <p class="bl_slider__normalPrice">10299 грн.</p>
+                                            <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                            <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+                                </li>
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_7.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <p class="bl_slider__normalPrice">10299 грн.</p>
+                                            <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                            <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+                                </li>
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_8.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <p class="bl_slider__normalPrice">10299 грн.</p>
+                                            <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                            <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+                                </li>
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_9.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <p class="bl_slider__normalPrice">10299 грн.</p>
+                                            <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                            <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+                                </li>
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_10.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <p class="bl_slider__normalPrice">10299 грн.</p>
+                                            <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                            <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+                                </li>
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_11.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <p class="bl_slider__normalPrice">10299 грн.</p>
+                                            <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                            <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+                                </li>
+                                <li class="bl_slider__item">
+                                    <a href="#" class="bl_slider__link">
+                                        <img class="bl_slider__img" src="image/Product/cat/prod_12.png" alt="">
+                                        <p class="bl_slider__name">POS-компьютер POSIFLEX PB-4600Е</p>
+                                    </a>
+                                    <div class="bl_shortReviews">
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__full"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                        <div class="icon_star__empty"></div>
+                                    </div>
+                                    <ul class="bl_shortAtributes">
+                                        <!-- выводить не больше 5 атрибутов -->
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                        <li><strong>Процессор:</strong>Intel Pentium Dual Core T4500 2.3GHz</li>
+                                        <li><strong>Оперативная память:</strong> 1ГБ DDR3 (расширение до 4 ГБ)</li>
+                                    </ul>
+                                    <div class="bl_slider__wrapperPrice">
+                                        <div class="bl_slider__price">
+                                            <p class="bl_slider__normalPrice">10299 грн.</p>
+                                            <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                            <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                        </div>
+                                        <button class="btn_buy" type="button">купить</button>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <!-- PAGINATION -->
+                            <div class="bl_pagination">
+                                <div class="bl_pagination">
+                                    <ul class="bl_pagination__fullItems">
+
+                                        <li class="bl_pagination__item"><a href="#" class="bl_pagination__link bl_pagination__prevPage"></a></li>
+                                        <li class="bl_pagination__item"><a href="#" class="bl_pagination__link">1</a></li>
+                                        <li class="bl_pagination__item"><span class="bl_pagination__link bl_pagination__link_active">2</span></li>
+                                        <li class="bl_pagination__item"><a href="#" class="bl_pagination__link">3</a></li>
+                                        <li class="bl_pagination__item"><a href="#" class="bl_pagination__link">4</a></li>
+                                        <li class="bl_pagination__item"><a href="#" class="bl_pagination__link bl_pagination__nextPage"></a></li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <!-- -->
+
+                            <!-- SEO - SHMEO -->
+                            <div class="bl_ceo">
+                                <p> POS-компьютеры являются одним из ключевых видов торгового оборудования. Они, в основном предназначены для автоматизации рабочих мест на кассах с ограниченным пространством, например в супермаркете, где плотность кассиров в при кассовой зоне достаточно большая, или в аптечном киоске, где провизоры-фармацевты часто имеют мало пространства для размещения персонального компьютера, или даже ноутбука. </p>
+
+                                <p> При автоматизации рабочего места кассира торгового предприятия Заказчиком часто приобретается целый комплекс торгового оборудования: денежный ящик, POS-компьютер, POS-монитор, программируемая клавиатура, сканер штрих-кода, фискальный регистратор или принтер чеков, в зависимости от системы налогообложения, по которой работает Заказчик, к нему - дисплей покупателя. Все это оборудование требует место для размещения в комплексе. POS-компьютер может быть прикреплен к стенке ДСП-прикассового бокса, к стене, или при условии горизонтального форм-фактора на нем может быть размещено все вышеперечисленное оборудование. </p>
+
+                                <p> Но и это не все. Самым важным аспектом при принятия решения Заказчиком в отношении POS-компьютера является наличие всех необходимых портов в нужном количестве для подключения к нему торгового оборудования, например с интерфейсом подключения RS-232. Почти все обычные компьютеры имеют до одного такого порта, а некоторые и вообще не имеют, что нельзя сказать о POS-компьютере. Как правило в него встроено от трех портов с интерфейсом подключения RS-232, что позволяет подключить все необходимое оборудование беспрепятственно. </p>
+
+                                <p>  Также на POS-компьютера повышенная защита от пыли и влаги, т.е. есть такие модели где защита достаточно высока IP68, что обезопасит при работе, например, во влажной среде. </p>
+                            </div>
+
+
+
+
 
 
                         </div>
                     </div>
-                    
-
 
 
                 </div>
