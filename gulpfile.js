@@ -7,9 +7,13 @@ var gulp = require("gulp"),                             // gulp core
     gulpif = require('gulp-if'),                        // conditionally run a task
     clean = require('gulp-clean'),                      // removing files and folders
     uglify = require('gulp-uglify'),                    // uglifies the js
+    // pump = require('pump'),
     rename = require('gulp-rename'),                    // rename files
     useref = require('gulp-useref'),                    // parse build blocks in HTML files to replace references
-    minifyCss = require('gulp-minify-css'),             // minify the css files
+
+    cssmin = require('gulp-cssmin'),                    // minify the css files
+    csso = require('gulp-csso'),
+
     autoprefixer = require('gulp-autoprefixer'),        // sets missing browserprefixes
     browserSync = require('browser-sync').create(),     // inject code to all devices
     imagemin = require('gulp-imagemin'),                // minify images
@@ -145,9 +149,8 @@ gulp.task('build', ['clean'], function () {
     gulp.start('extrass');                              // extras task
 
     return gulp.src('app/*.html')
-
         .pipe(gulpif('*.js', uglify()))                 // uglify js-files
-        .pipe(gulpif('*.css', minifyCss()))             // minify css-files
+        .pipe(gulpif('*.css', cssmin()))                  // minify css-files
         .pipe(useref())
         .pipe(gulp.dest('./dist'));                     // where to put the files
 });
@@ -168,3 +171,37 @@ function buildSprite() {
     spriteData.img.pipe(gulp.dest('./app/image'));
     return spriteData.css.pipe(gulp.dest('./app/sass/components'));
 }
+
+/*********************************************/
+/*Minimization CSS*/
+/*********************************************/
+
+/* Variant 1*/
+gulp.task('minimizationCSS', function () {
+    gulp.src('src/**/*.css')
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist'));
+});
+
+/* Variant 2*/
+gulp.task('minimaziCSS', function () {
+    return gulp.src('dist/css/*.css')
+        .pipe(csso({
+            restructure: false,
+            sourceMap: true,
+            debug: true
+        }))
+        .pipe(gulp.dest('dist/css/out'));
+});
+
+
+gulp.task('compress', function (cb) {
+    pump([
+            gulp.src('lib/*.js'),
+            uglify(),
+            gulp.dest('dist')
+        ],
+        cb
+    );
+});
