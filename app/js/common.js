@@ -1,7 +1,9 @@
 window.onload = function () {
 
     var blackWrapper = $(".blackWrapper"),
-        body = $("body");
+        body = $("body"),
+        active = "active";
+    var $window = $(window);
 
     ///  sliderEffect
     function sliderEffectForButtons(button, element, duration) {
@@ -16,6 +18,21 @@ window.onload = function () {
             element.toggleClass("hidden");
         });
     }
+
+
+    function slideSubMenu(btn, fieldUnderBtn, displayView){
+        btn.each(function(){
+            $(this).on({
+                click: function (){
+                    if ($window.width() <= displayView) {
+                        fieldUnderBtn.slideToggle(400);
+                    }
+                }
+            });
+        });
+    }
+
+
 
     var buttonLanguage = $(".bl_language__active"),
         fieldWithOtherLanguage = $(".bl_language__variables"),
@@ -36,18 +53,45 @@ window.onload = function () {
 
 
     var headerNavigationButton = $(".bl_navGroup__button");
-    headerNavigationButton.on("click", function () {
+        headerNavigationButton.on("click", function () {
         $(".bl_navGroup").toggleClass("active");
         $(this).toggleClass("icon-bar icon-close");
     });
 
 
     var btnShowMoreFooterInformation = $(".bl_navigation__show");
-    btnShowMoreFooterInformation.on("click", function () {
+        btnShowMoreFooterInformation.on("click", function () {
         $(this).toggleClass("active");
         $(".bl_navigation__full").slideToggle(300);
 
     });
+
+    ///// Caterories
+    var btnMobileCategories = $(".bl_catalog__button"),
+        fieldCategories = $(".bl_catalog__full");
+
+    slideSubMenu(btnMobileCategories, fieldCategories, 991);
+
+
+    var btnCategories = $(".bl_catalog__btn");/// min button
+
+    btnCategories.click(function () {
+        $(this).toggleClass(active);
+        $(this).parent(".bl_catalogs__item").toggleClass(active);
+        $(this).siblings("ul").eq(0).slideToggle(400);
+    });
+
+////////// FILTERS
+    var btnMobileFilters = $(".bl_filters__button"),
+        fieldFilters = $(".bl_filters__full"),
+        btnFilters =$(".bl_filters__btn");
+
+    btnFilters.click(function () {
+        $(this).toggleClass(active);
+        $(this).next(".bl_filters__section").slideToggle(400);
+    });
+
+    slideSubMenu(btnMobileFilters, fieldFilters, 991);
 
 
     //// Main-slider
@@ -66,8 +110,13 @@ window.onload = function () {
         pagination: false,
         responsiveClass: true,
         responsive: {
+            992: {
+                items: 1,
+                dots: true
+            },
             320: {
-                items: 1
+                items: 1,
+                dots: false
             }
         }
     });

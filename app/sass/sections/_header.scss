@@ -1,12 +1,15 @@
 .header {
   width: 100%;
+  min-height: 130px;
+  overflow: hidden;
 }
 
 .heared_firstPart {
   position: relative;
   width: 100%;
-  min-height: 35px;
+
   background-color: $color_headerFirst;
+
 }
 
 .nav_main {
@@ -530,6 +533,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(0);
+    transition: all, .6s ease-in;
     @include sprite($icon-gear);
   }
 }
