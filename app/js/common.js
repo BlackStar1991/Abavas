@@ -272,6 +272,32 @@ window.onload = function () {
         })
     }
 
+ //////////////// Catalog VIEW GRID/LIST
+
+    var catalogField = $(".bl_products"),
+
+        btnGrid =$(".js-grid"),
+        btnList =$(".js-list"),
+
+
+        viewGrid = "view-grid",
+        viewList = "view-list";
+
+
+    btnList.on("click", function(){
+
+        catalogField.removeClass(viewGrid);
+        catalogField.addClass(viewList);
+
+    });
+
+
+    btnGrid.on("click", function(){
+        catalogField.removeClass(viewList);
+        catalogField.addClass(viewGrid);
+
+    });
+
 
     /// POPUP BIFORE ADD TO SHOPBAG
     //

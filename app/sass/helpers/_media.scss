@@ -47,11 +47,15 @@
 
 
 
-  .view-gride .bl_slider__item{
+  .view-grid .bl_slider__item{
     max-width:216px;
   }
-  .view-gride .bl_slider__normalPrice, .view-gride .bl_slider__newPrice{
+  .view-grid .bl_slider__normalPrice, .view-grid .bl_slider__newPrice{
     font-size: 24px;
+  }
+
+  .view-list  .bl_slider__wrapperPrice{
+    width: 120px;
   }
 
 }
@@ -267,7 +271,7 @@
   .bl_products, .bl_products + .bl_pagination{
     margin-left: 0;
   }
-  .view-gride .bl_slider__item{
+  .view-grid .bl_slider__item{
     max-width:222px;
   }
 
@@ -307,19 +311,52 @@
     text-align: center;
   }
 
-  .view-gride .bl_slider__item:nth-of-type(3n - 1){
+  .view-grid .bl_slider__item:nth-of-type(3n - 1){
     margin-left:0;
     margin-right: 0;
   }
 
-  .view-gride .bl_slider__item{
+  .view-grid .bl_slider__item{
     width: 50%;
     max-width:276px;
   }
 
-  .view-gride .bl_slider__name{
+  .view-grid .bl_slider__name{
     text-align: center;
   }
+
+////LIST
+  .view-list  .bl_slider__item{
+    padding:10px 0;
+  }
+  .view-list .bl_slider__link{
+    width: 100%;
+  }
+
+  .view-list .bl_shortAtributes{
+    max-width:initial;
+  }
+
+ .view-list .bl_slider__wrapperPrice{
+   float: none;
+   min-height:initial;
+   margin-top: 10px;
+   width: 100%;
+   flex-direction: row;
+  }
+  .view-list .btn_buy{
+    margin: 0;
+    margin-right: 10px;
+  }
+
+/////////
+
+  .module_readySolution__addAll{
+    margin-top: 15px;
+    float: none;
+  }
+
+
 
   .bl_logo {
     max-width: 256px;
@@ -363,19 +400,38 @@
     width: auto;
   }
 
-  .view-gride .bl_slider__item{
+  .view-grid .bl_slider__item{
     width: 100%;
     max-width:initial;
   }
 
-  .view-gride .btn_buy{
+  .view-grid .btn_buy{
     width: 30vw;
   }
 
+
+  .view-list .bl_slider__name{
+    width: 100%;
+  }
 }
 
 /* Extra Small Devices, Phones 480px */
 @media only screen and (max-width: 480px) {
+
+
+  .view-list .bl_shortAtributes{
+    li{
+      strong{
+        display: block;
+      }
+    }
+  }
+
+  .module_readySolution__callBack, .module_readySolution__addAll{
+    width:auto;
+    font-size: 18px;
+    padding: 0 10px;
+  }
 
 }
 
