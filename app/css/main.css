@@ -1627,6 +1627,14 @@ textarea::-moz-focus-inner {
 .bl_sliderHits.owl-carousel .owl-item img {
   max-width: 235px; }
 
+.bl_mainProduct__slider.owl-carousel .owl-nav {
+  top: 70%; }
+  .bl_mainProduct__slider.owl-carousel .owl-nav .owl-prev,
+  .bl_mainProduct__slider.owl-carousel .owl-nav .owl-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; }
+
 .bl_ourWorks__inner {
   width: 100%;
   min-height: 254px;
@@ -2709,6 +2717,45 @@ textarea::-moz-focus-inner {
   background-position: -65px -109px;
   width: 8px;
   height: 14px; }
+
+.bl_mainProduct {
+  clear: both;
+  width: 100%;
+  margin-top: 40px; }
+
+.bl_mainProduct__box {
+  position: relative;
+  width: 100%;
+  min-height: 100px; }
+
+.bl_mainProduct__mainPhoto {
+  width: 100%;
+  display: block;
+  margin: 0 auto; }
+
+.bl_mainProduct__slider {
+  width: 100%;
+  border: 1px solid red; }
+
+.bl_mainProduct__item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer; }
+
+.product_main__name {
+  margin: 0;
+  width: 100%;
+  color: #191919;
+  font-family: "Calibri", sans-serif;
+  font-size: 28px;
+  font-weight: 700; }
+
+.product_main__controls {
+  display: inline-block; }
+
+.bl_mainProduct__raiting {
+  display: inline-block;
+  float: right; }
 
 /*********************************************/
 /*FOOTER*/

@@ -209,6 +209,60 @@ window.onload = function () {
 
     sliderHits();
 
+//// Main Product Slider
+    function sliderMainProduct() {
+
+        var currentItems = 4,
+            sliderItems = $(".bl_mainProduct__item").length,
+            currentLoop;
+        if (sliderItems > currentItems) {
+            currentLoop = true;
+        }else {
+            currentLoop = false;
+        }
+
+
+        $(".bl_mainProduct__slider").owlCarousel({
+            items: currentItems,
+            loop: currentLoop,
+            nav: true,
+            navText: true,
+            dots: false,
+            autoplay: false,
+            stopOnHover: true,
+            // margin: 6,
+            smartSpeed: 1000,
+            autoplayTimeout: 4000,
+            pagination: false,
+            responsiveClass: true,
+            responsive: {
+                1200: {
+                    items: 4
+                },
+                992: {
+                    items: 3,
+                    center: true
+                },
+                550: {
+
+                    dots: false,
+                    items: 2
+                },
+                320: {
+                    dots: false,
+                    items: 1,
+                    center: true
+                }
+
+            }
+        });
+    }
+
+    sliderMainProduct();
+
+
+
+
 
 // Ancor to top
     /*
