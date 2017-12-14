@@ -244,28 +244,40 @@ textarea {
   height: 47px;
   border: 3px solid $color_dark;
   box-sizing: border-box;
-  color: $color_dark;
+
   font-size: 1em;
   font-weight: 700;
   line-height: 44px;
+
   text-transform: uppercase;
-  transition: .2s all;
+  transition: .6s all;
+
+  overflow: hidden;
   z-index: 2;
   span {
+    color: $color_dark;
+    transition: .2s right,
+                .2s color .2s;
     position: relative;
-    padding-right: 26px;
+    right: 26px;
   }
 
   &:hover,
   &:focus {
-    color: $color_yellow;
     background-color: $color_dark;
+
+    transition: .4s background-color .3s;
     span {
-      padding-right: 0;
+      color: $color_yellow;
+      right: 0;
+      transition: .2s right ease-in,
+                  .2s color .2s;
+
     }
     .arrow-link {
       &:after {
-        content: none;
+        transition: .4s all ease-in;
+        right: -100%;
       }
     }
   }
@@ -276,7 +288,7 @@ textarea {
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    right: -26px;
     @include sprite($arrow_link);
   }
 }

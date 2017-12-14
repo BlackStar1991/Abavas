@@ -1473,29 +1473,34 @@ textarea::-moz-focus-inner {
   height: 47px;
   border: 3px solid #191919;
   box-sizing: border-box;
-  color: #191919;
   font-size: 1em;
   font-weight: 700;
   line-height: 44px;
   text-transform: uppercase;
-  transition: .2s all;
+  transition: .6s all;
+  overflow: hidden;
   z-index: 2; }
   .bl_mainSlider__link span {
+    color: #191919;
+    transition: .2s right, .2s color .2s;
     position: relative;
-    padding-right: 26px; }
+    right: 26px; }
   .bl_mainSlider__link:hover, .bl_mainSlider__link:focus {
-    color: #ffd608;
-    background-color: #191919; }
+    background-color: #191919;
+    transition: .4s background-color .3s; }
     .bl_mainSlider__link:hover span, .bl_mainSlider__link:focus span {
-      padding-right: 0; }
+      color: #ffd608;
+      right: 0;
+      transition: .2s right ease-in, .2s color .2s; }
     .bl_mainSlider__link:hover .arrow-link:after, .bl_mainSlider__link:focus .arrow-link:after {
-      content: none; }
+      transition: .4s all ease-in;
+      right: -100%; }
 
 .arrow-link:after {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  right: -26px;
   background-image: url(../image/sprite.png);
   background-position: -65px -109px;
   width: 8px;
