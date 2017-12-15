@@ -267,7 +267,7 @@
 .bl_logo__words {
   position: relative;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 8px;
   color: #fff;
   font-weight: 700;
   box-sizing: border-box;
@@ -483,16 +483,41 @@
 .icon-shopBasket{
   position: relative;
   width: 100%;
-  height: 40px;
-  &:after{
+  min-height:40px;
+
+  &:after,
+  &:before{
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include sprite($icon-basket);
+    left: 8px;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    border: 2px solid $color_yellow;
+    border-right:none;
+  }
+  &:before{
+    left:auto;
+    right: 8px;
+    border-right:2px solid $color_yellow;
+    border-left: none;
   }
 }
+
+#icon-shopBag{
+  fill: inherit;
+}
+
+#icon-shopCart{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: translateY(50%);
+  fill: $color_yellow;
+  z-index:3;
+}
+
+
 
 .bl_shopBasket__items{
   position: absolute;
