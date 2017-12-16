@@ -720,8 +720,6 @@ textarea {
   }
 }
 
-
-
 .bl_shortAtributes {
   clear: both;
   width: 100%;
@@ -1972,7 +1970,7 @@ $transition-box: 0.4s all ease-in;
   width: 56px;
   height: 38px;
 
-  &:after{
+  &:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -2019,14 +2017,14 @@ $transition-box: 0.4s all ease-in;
 
 ////////////// Advantages
 
-.inf_product{
+.inf_product {
   width: 100%;
 }
 
-.inf_product__item{
+.inf_product__item {
   margin-right: 5%;
 
-  a{
+  a {
     font-size: 22px;
     font-weight: 700;
     line-height: 26px;
@@ -2035,38 +2033,37 @@ $transition-box: 0.4s all ease-in;
     color: #a0a0a0;
   }
 
-  .active a{
+  .active a {
     color: $color_dark;
   }
 }
 
-.tab-content{
+.tab-content {
   width: 100%;
   margin-bottom: 30px;
 }
 
-
-.nav-tabs>li.active>a, .nav-tabs>li>a, .nav-tabs>li>a:hover,
-.nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:hover{
+.nav-tabs > li.active > a, .nav-tabs > li > a, .nav-tabs > li > a:hover,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
   background: none;
   border: none;
   padding-left: 0;
   padding-right: 0;
 }
 
-.inf_product__tabs{
+.inf_product__tabs {
   width: 100%;
   margin-bottom: 60px;
-  border:none;
+  border: none;
 }
 
-.bl_attributes{
+.bl_attributes {
   width: 100%;
   display: block;
 }
 
-.bl_attributes__item{
+.bl_attributes__item {
   width: 100%;
   margin-top: 20px;
   font-family: $Calibri;
@@ -2075,7 +2072,7 @@ $transition-box: 0.4s all ease-in;
   color: $color_dark;
 }
 
-#tab-description{
+#tab-description {
   color: #696969;
   font-family: $Calibri;
   font-size: 18px;
@@ -2083,14 +2080,13 @@ $transition-box: 0.4s all ease-in;
   line-height: 26px;
 }
 
-
 ////////
 
-.review_slider{
+.review_slider {
   width: 100%;
 }
 
-.review_item{
+.review_item {
   position: relative;
   vertical-align: top;
   display: inline-block;
@@ -2099,33 +2095,27 @@ $transition-box: 0.4s all ease-in;
   height: 162px;
   overflow-y: auto;
 
-
 }
 
-.review_item__userName{
+.review_item__userName {
   color: $color_dark;
   font-family: $Calibri;
   font-size: 20px;
   font-weight: 700;
 }
 
-.review_item .bl_shortReviews{
+.review_item .bl_shortReviews {
   width: 100%;
 }
 
-.review_item__fullText{
+.review_item__fullText {
   color: #696969;
   font-family: "Calibri - Light Italic", "Calibri", sans-serif;
   font-size: 18px;
   font-style: italic;
 }
 
-
-
-
-
 ////
-
 
 .icon_star__full,
 .icon_star__empty {
@@ -2146,16 +2136,47 @@ $transition-box: 0.4s all ease-in;
   }
 }
 
+.personal-form-review{
+  input,textarea{
+    &::placeholder{
+      color: #939393;
+      font-family: "Calibri - Light Italic", "Calibri", sans-serif;
+      font-style: italic;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    &:focus{
+      outline-color: $color_yellow;
+    }
+  }
+}
 
-.bl_review__raiting{
+
+.review_name,
+.review_email{
+  width: 290px;
+  height: 30px;
+  border: 1px solid #d1d1d1;
+  margin-bottom: 10px;
+}
+.review_textarea{
+  width: 100%;
+  min-height: 72px;
+  border: 1px solid #d1d1d1;
+  resize:none;
+}
+
+
+
+
+.bl_review__raiting {
   width: 100%;
 }
 
 .bl_review__raitingFull {
   display: inline-block;
 }
-
-
 
 .bl_review__raitingFull input:checked ~ label:before {
   content: "\2605";
@@ -2165,7 +2186,7 @@ $transition-box: 0.4s all ease-in;
   transform: translate(-50%, -50%);
   color: $color_yellow;
   font-size: 24px;
-  z-index:2;
+  z-index: 2;
 }
 
 .bl_review__raitingFull label:hover:before,
@@ -2177,7 +2198,7 @@ $transition-box: 0.4s all ease-in;
   transform: translate(-50%, -50%);
   color: $color_yellow;
   font-size: 24px;
-  z-index:2;
+  z-index: 2;
 }
 
 .bl_review__raitingFull .bl_raiting__label {
@@ -2200,9 +2221,6 @@ $transition-box: 0.4s all ease-in;
     text-decoration: underline;
   }
 }
-
-
-
 
 /*********************************************/
 /*FOOTER*/
