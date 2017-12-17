@@ -179,7 +179,7 @@
 
             <div class="container">
                 <div class="bl_mainProduct">
-                    <div class="col-xs-12 col-md-4">
+                    <div class="col-xs-12 col-sm-4">
 
                         <div class="bl_mainProduct__box">
                             <img class="bl_mainProduct__mainPhoto" src="image/Product/prod1.png" alt="">
@@ -206,7 +206,7 @@
 
 
                     </div>
-                    <div class="col-xs-12 col-md-8">
+                    <div class="col-xs-12  col-sm-8">
                         <h1 class="product_main__name">POS-компьютер POSIFLEX PB-3600</h1>
 
                         <div class="product_main__controls">
@@ -447,9 +447,7 @@
 
                                 <form class="form-horizontal personal-form-review" id="form-review">
                                     <div id="review"><p>У данного товара пока нету отзывов, будь первым</p></div>
-                                    <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> Пожалуйста,
-                                        выберите оценку товара!
-                                    </div>
+                                    <div class="alert alert-danger">Пожалуйста, выберите оценку товара!</div>
 
 
                                     <div class="form-group">
@@ -464,7 +462,7 @@
 
                                                 <div class="bl_review__raitingFull">
                                                     <input class="bl_raiting__chackbox" id="review_star5" type="radio"
-                                                           name="raiting" value="5">
+                                                           name="raiting" value="5" checked>
                                                     <label class="bl_raiting__label" for="review_star5"></label>
 
                                                     <input class="bl_raiting__chackbox" id="review_star4" type="radio"
@@ -487,16 +485,13 @@
 
                                         </div>
                                         <div class="col-sm-9">
-                                         <textarea class="review_textarea" name="text" rows="5" id="input-review" placeholder="Напишете отзыв..."></textarea>
+                                            <textarea class="review_textarea" name="text" rows="3" id="input-review"
+                                                      placeholder="Напишете отзыв..."></textarea>
                                         </div>
                                     </div>
 
-
-                                    <button class="button_buy clearfix" type="button" id="button-review"
-                                            data-loading-text="Загрузка...">
-                                        <span class="button_buy__text">Отправить</span>
+                                    <button type="button" id="button-review" data-loading-text="Загрузка...">Отправить
                                     </button>
-
                                 </form>
                             </div>
 
@@ -504,264 +499,303 @@
 
                     </div>
 
+                    <!-- Slider Рекомендуемые товары:-->
 
-                    <!--<div class="bl_withThisProductBuy">-->
-                    <!--<h2 class="title_name bl_withThisProductBuy__title">С этим товаром покупают:</h2>-->
+                    <div class="bl_sliderRecommended__full">
 
-                    <!--<ul class="slider_withThisProductBuy owl-carousel">-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
+                        <p class="slider_name">Рекомендуемые товары:</p>
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
+                        <ul class="bl_sliderRecommended owl-carousel">
+                            <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/product1.jpg" alt="">
+                                    <p class="bl_slider__name">Дополнительный монитор: LM-8015/35</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__empty"></div>
+                                    <div class="icon_star__empty"></div>
+                                    <div class="icon_star__empty"></div>
+                                    <div class="icon_star__empty"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!-- выводить не больше 5 атрибутов -->
+                                    <li>Диагональ монитора: 15</li>
+                                    <li>Подключается к терминалам: Cерия JIVA/KS</li>
+                                </ul>
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <!--<p class="bl_slider__normalPrice">10299 грн.</p>-->
+                                        <p class="bl_slider__oldPrice">10299 грн.</p>
+                                        <p class="bl_slider__newPrice">9299 грн.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/product2.jpg" alt="">
+                                    <p class="bl_slider__name">Дополнительный монитор: LM-8015/35</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!--выводить не больше 5 атрибутов-->
+                                    <li>Тип: Многоплоскостной</li>
+                                    <li>Частота сканирования: 2400 скан/сек</li>
+                                </ul>
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <p class="bl_slider__normalPrice">10299 грн.</p>
+                                        <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                        <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/product3.jpg" alt="">
+                                    <p class="bl_slider__name">Дополнительный монитор: LM-8015/35</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!--выводить не больше 5 атрибутов-->
+                                    <li>Диагональ монитора: 15</li>
+                                    <li>Оперативная память: 1 ГБ DDR3 (расширяется до 4 ГБ)</li>
+                                </ul>
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <p class="bl_slider__normalPrice">10299 грн.</p>
+                                        <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                        <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/product4.jpg" alt="">
+                                    <p class="bl_slider__name">Дополнительный монитор: LM-8015/35</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!--выводить не больше 5 атрибутов-->
+                                    <li>Память: 128 Мб ROM/64 Mб RAM</li>
+                                    <li> слот расширения для SD-карт</li>
+                                    <li> Вес (гр): 180 г</li>
+                                </ul>
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <p class="bl_slider__normalPrice">10299 грн.</p>
+                                        <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                        <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                    </div>
+                                </div>
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
+                            </li>
+                            <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/product4.jpg" alt="">
+                                    <p class="bl_slider__name">Дополнительный монитор: LM-8015/35</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!--выводить не больше 5 атрибутов-->
+                                    <li>Память: 128 Мб ROM/64 Mб RAM</li>
+                                    <li> слот расширения для SD-карт</li>
+                                    <li> Вес (гр): 180 г</li>
+                                </ul>
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <p class="bl_slider__normalPrice">10299 грн.</p>
+                                        <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                        <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                    </div>
+                                </div>
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
+                            </li>
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
+                        </ul>
+                    </div>
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
+                    <!-- Slider вы просматривали:-->
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--</ul>-->
-                    <!--</div>-->
-                    <!---->
-                    <!--<div class="bl_youViewed clearfix">-->
-                    <!--<h2 class="title_name bl_youViewed__title">Вы смотрели:</h2>-->
+                    <div class="bl_sliderYouReviewed__full">
 
-                    <!--<ul class="slider_youViewed owl-carousel">-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
+                        <p class="slider_name">вы просматривали:</p>
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
+                        <ul class="bl_sliderYouReviewed owl-carousel">
+                            <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/product1.jpg" alt="">
+                                    <p class="bl_slider__name">Дополнительный монитор: LM-8015/35</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__empty"></div>
+                                    <div class="icon_star__empty"></div>
+                                    <div class="icon_star__empty"></div>
+                                    <div class="icon_star__empty"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!-- выводить не больше 5 атрибутов -->
+                                    <li>Диагональ монитора: 15</li>
+                                    <li>Подключается к терминалам: Cерия JIVA/KS</li>
+                                </ul>
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <!--<p class="bl_slider__normalPrice">10299 грн.</p>-->
+                                        <p class="bl_slider__oldPrice">10299 грн.</p>
+                                        <p class="bl_slider__newPrice">9299 грн.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/product2.jpg" alt="">
+                                    <p class="bl_slider__name">Дополнительный монитор: LM-8015/35</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!--выводить не больше 5 атрибутов-->
+                                    <li>Тип: Многоплоскостной</li>
+                                    <li>Частота сканирования: 2400 скан/сек</li>
+                                </ul>
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <p class="bl_slider__normalPrice">10299 грн.</p>
+                                        <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                        <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/product3.jpg" alt="">
+                                    <p class="bl_slider__name">Дополнительный монитор: LM-8015/35</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!--выводить не больше 5 атрибутов-->
+                                    <li>Диагональ монитора: 15</li>
+                                    <li>Оперативная память: 1 ГБ DDR3 (расширяется до 4 ГБ)</li>
+                                </ul>
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <p class="bl_slider__normalPrice">10299 грн.</p>
+                                        <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                        <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/product4.jpg" alt="">
+                                    <p class="bl_slider__name">Дополнительный монитор: LM-8015/35</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!--выводить не больше 5 атрибутов-->
+                                    <li>Память: 128 Мб ROM/64 Mб RAM</li>
+                                    <li> слот расширения для SD-карт</li>
+                                    <li> Вес (гр): 180 г</li>
+                                </ul>
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <p class="bl_slider__normalPrice">10299 грн.</p>
+                                        <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                        <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                    </div>
+                                </div>
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
+                            </li>
+                            <li class="bl_slider__item">
+                                <a href="#" class="bl_slider__link">
+                                    <img class="bl_slider__img" src="image/Product/product4.jpg" alt="">
+                                    <p class="bl_slider__name">Дополнительный монитор: LM-8015/35</p>
+                                </a>
+                                <div class="bl_shortReviews">
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__full"></div>
+                                    <div class="icon_star__empty"></div>
+                                </div>
+                                <ul class="bl_shortAtributes">
+                                    <!--выводить не больше 5 атрибутов-->
+                                    <li>Память: 128 Мб ROM/64 Mб RAM</li>
+                                    <li> слот расширения для SD-карт</li>
+                                    <li> Вес (гр): 180 г</li>
+                                </ul>
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
+                                <div class="bl_slider__wrapperPrice">
+                                    <div class="bl_slider__price">
+                                        <p class="bl_slider__normalPrice">10299 грн.</p>
+                                        <!--<p class="bl_slider__oldPrice">10299 грн.</p>-->
+                                        <!--<p class="bl_slider__newPrice">9299 грн.</p>-->
+                                    </div>
+                                </div>
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
+                            </li>
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
+                        </ul>
+                    </div>
 
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="product_sliderCart__item">-->
-                    <!--<div class="product_sliderCart__item_wrapper">-->
 
-                    <!--<a href="#" class="product_sliderCart__link">-->
-                    <!--<img class="product_sliderCart__image" src="image/Products/product_1.jpg"-->
-                    <!--alt="">-->
-                    <!--<h2 class="product_sliderCart__name">-->
-                    <!--Рюкзак тактический Norfin TACTIC 45 45л / NF-->
-                    <!--</h2>-->
-                    <!--</a>-->
-
-                    <!--<div class="product_sliderCart__price clearfix">-->
-                    <!--<span class="product_sliderCart__price_oldPrice">2034 грн.</span>-->
-                    <!--<span class="product_sliderCart__price_newPrice">100 грн.</span>-->
-                    <!--&lt;!&ndash;<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<button type="button" class="product_sliderCart__buy"><span-->
-                    <!--class="product_sliderCart__buy_text">Купить</span></button>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--</ul>-->
-                    <!--</div>-->
 
 
                 </div>
             </div>
+        </div>
     </main>
     <!-- ---------------------------------------- FOOTER --------------------------------------------------------- -->
     <footer class="footer clearfix">

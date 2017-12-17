@@ -7,8 +7,8 @@ var gulp = require("gulp"),                             // gulp core
     gulpif = require('gulp-if'),                        // conditionally run a task
     clean = require('gulp-clean'),                      // removing files and folders
     uglify = require('gulp-uglify'),                    // uglifies the js
-    concat = require('gulp-concat'),
 
+    concat = require('gulp-concat'),
     rename = require('gulp-rename'),                    // rename files
     useref = require('gulp-useref'),                    // parse build blocks in HTML files to replace references
 
@@ -75,7 +75,8 @@ gulp.task('sass', ['sprite'], function () {
 
 gulp.task('js', function () {
     return gulp.src('./app/js/*.js')                 // get the files
-        .pipe(browserSync.stream());                    // browsersync stream
+        .pipe(browserSync.stream())
+                                   // browsersync stream
 });
 
 /*********************************************/
@@ -175,16 +176,16 @@ function buildSprite() {
     return spriteData.css.pipe(gulp.dest('./app/sass/components'));
 }
 
-
-// gulp.task('jsmin', function(){
-//     gulp.src([
-//         '*.js'
-//
-//     ])
-//         .pipe(concat('script.js'))
-//         .pipe(uglify())
-//         .pipe(gulp.dest('dist/js/'));
-// });
+/*********************************************/
+/*MINIMIZATION JS*/
+/*********************************************/
+gulp.task('jsmin', function(){
+    gulp.src(['./app/js/*.js'])
+        .pipe(concat('common.js'))
+        .pipe(uglify())
+        .pipe(rename("./common-xmin.js"))
+        .pipe(gulp.dest('app/js'));
+});
 
 
 

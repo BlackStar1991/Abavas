@@ -2,8 +2,8 @@ window.onload = function () {
 
     var blackWrapper = $(".blackWrapper"),
         body = $("body"),
-        active = "active";
-    var $window = $(window);
+        active = "active",
+        $window = $(window);
 
     ///  sliderEffect
     function sliderEffectForButtons(button, element, duration) {
@@ -20,6 +20,7 @@ window.onload = function () {
     }
 
 
+    /// scrollButton
     function slideSubMenu(btn, fieldUnderBtn, displayView){
         btn.each(function(){
             $(this).on({
@@ -157,7 +158,7 @@ window.onload = function () {
         }
     });
 
-////// slider_newProducts
+////// HITs slider
 
     function sliderHits() {
 
@@ -208,6 +209,117 @@ window.onload = function () {
     }
 
     sliderHits();
+
+
+////// Recommended slider
+
+    function sliderRecommended() {
+
+        var currentItems = 4,
+            sliderItems = $(".bl_sliderRecommended .bl_slider__item").length,
+            currentLoop;
+        if (sliderItems > currentItems) {
+            currentLoop = true;
+        }else {
+            currentLoop = false;
+        }
+
+
+        $(".bl_sliderRecommended").owlCarousel({
+            items: currentItems,
+            loop: currentLoop,
+            nav: true,
+            navText: true,
+            dots: false,
+            autoplay: false,
+            stopOnHover: true,
+            // margin: 6,
+            smartSpeed: 1000, //Время движения слайда
+            autoplayTimeout: 4000, //Время смены слайда
+            pagination: false,
+            responsiveClass: true,
+            responsive: {
+                1200: {
+                    items: 4
+                },
+                992: {
+                    items: 3,
+                    center: true
+                },
+                550: {
+
+                    dots: false,
+                    items: 2
+                },
+                320: {
+                    dots: false,
+                    items: 1,
+                    center: true
+                }
+
+            }
+        });
+    }
+
+    sliderRecommended();
+
+////// Recommended slider
+
+    function sliderYouReviewed() {
+
+        var currentItems = 4,
+            sliderItems = $(".bl_sliderYouReviewed .bl_slider__item").length,
+            currentLoop;
+        if (sliderItems > currentItems) {
+            currentLoop = true;
+        }else {
+            currentLoop = false;
+        }
+
+
+        $(".bl_sliderYouReviewed").owlCarousel({
+            items: currentItems,
+            loop: currentLoop,
+            nav: true,
+            navText: true,
+            dots: false,
+            autoplay: false,
+            stopOnHover: true,
+            // margin: 6,
+            smartSpeed: 1000, //Время движения слайда
+            autoplayTimeout: 4000, //Время смены слайда
+            pagination: false,
+            responsiveClass: true,
+            responsive: {
+                1200: {
+                    items: 4
+                },
+                992: {
+                    items: 3,
+                    center: true
+                },
+                550: {
+
+                    dots: false,
+                    items: 2
+                },
+                320: {
+                    dots: false,
+                    items: 1,
+                    center: true
+                }
+
+            }
+        });
+    }
+
+    sliderYouReviewed();
+
+
+
+
+
+
 
 //// Main Product Slider
     function sliderMainProduct() {
@@ -262,6 +374,45 @@ window.onload = function () {
 
 
 
+
+
+// Ancor to top
+    /*
+        $(".bl_ancor").on("click", "a", function (event) {
+            event.preventDefault();
+            var id = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 500);
+        });
+        $(window).scroll(function () {
+
+
+
+            var ancor = $(".bl_ancor"),
+                windowHeight = $(window).height() / 2;
+
+            if ($(this).scrollTop() > windowHeight) {
+
+                ancor.removeClass("hidden");
+
+            } else {
+                ancor.addClass("hidden");
+            }
+
+
+            if ( ($(this).scrollTop() >= topMainHeaderBlock) && (screenWidth >= 1027)) {
+                mainHeaderBlock.addClass(mainHeaderFixed);
+                mainNavigation.addClass(mainNavigationFixed);
+            } else {
+                mainHeaderBlock.removeClass(mainHeaderFixed);
+                mainNavigation.removeClass(mainNavigationFixed);
+            }
+
+
+        });
+     */
+
+
 // FILTER for telephone number
 
     var telephonseInput = $("input[type='tel']");
@@ -313,6 +464,26 @@ window.onload = function () {
 
     });
 
+
+    /// POPUP BIFORE ADD TO SHOPBAG
+    //
+    //     function popupWindowBiforeAddToShopBag() {
+    //
+    //         var TESTBUTTON = $(".TEST_BUTTON");
+    //
+    //         var popupWindow = $(".popup_likeShopbag"),
+    //             buttonClose = $(".popup_likeShopbag__close"),
+    //             buttonContinueBuying = $(".popup_likeShopbag__continueBuying");
+    //
+    //         popupWindowShow(TESTBUTTON, popupWindow);
+    //
+    //         closePopupWindow(buttonClose, popupWindow);
+    //         closePopupWindow(buttonContinueBuying, popupWindow);
+    //         closePopupWindow(blackWrapper, popupWindow);
+    //
+    //     }
+    //
+    //     popupWindowBiforeAddToShopBag();
 
     ////////// CallBack PopUp
 

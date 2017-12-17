@@ -543,8 +543,9 @@
   z-index:12;
 }
 .bl_search__button{
-  position: relative;
-  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
   width: 36px;
   height: 36px;
   background-color: $color_headerSecond;

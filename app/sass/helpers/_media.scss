@@ -109,14 +109,14 @@
   }
 
   .bl_search {
-    position: absolute;
+    position: fixed;
     top: 35px;
-
     right: -100%;
     float: none;
     width: 200px;
     background-color: #fff;
     transition: $transit;
+    border: 2px solid $color_dark;
     z-index: 15;
   }
   .bl_search.active {
@@ -384,6 +384,26 @@
     margin-top: 2%;
   }
 
+.bl_mainProduct__secondPart{
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+  .bl_mainProduct__price{
+    width: 100%;
+
+  }
+  .bl_buttons{
+    margin-top: 20px;
+    clear: both;
+    width: 100%;
+
+    .btn_callBack__simple{
+      margin-right: 0;
+      float: right;
+    }
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -417,6 +437,39 @@
   .view-list .bl_slider__name{
     width: 100%;
   }
+
+  .inf_product{
+    .nav-tabs>li{
+      float: none;
+      margin: 10px auto;
+      text-align: center;
+      background-color: $color_yellow;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      
+      >a{
+        color: #000;
+      }
+      &.active{
+        >a{
+          //text-decoration: underline;
+          &:before,
+          &:after{
+            content: " > ";
+            font-size: inherit;
+            color: inherit;
+          }
+          &:after{
+            content: " < ";
+          }
+        }
+      }
+    }
+    
+    
+  }
+
+
 }
 
 /* Extra Small Devices, Phones 480px */
@@ -435,6 +488,14 @@
     width:auto;
     font-size: 18px;
     padding: 0 10px;
+  }
+
+  .bl_mainProduct__raiting{
+    float: none;
+    display: block;
+  }
+  .bl_buttons .btn_callBack__simple{
+    float: none;
   }
 
 }
