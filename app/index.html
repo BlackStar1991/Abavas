@@ -183,6 +183,7 @@
 
                         <div class="bl_mainProduct__box">
                             <img class="bl_mainProduct__mainPhoto" src="image/Product/prod1.png" alt="">
+                            <!-- photo min 350x202px -->
                         </div>
 
                         <ul class="bl_mainProduct__slider owl-carousel hidden-xs">
@@ -199,9 +200,9 @@
                             <li class="bl_mainProduct__item">
                                 <img class="bl_mainProduct__img" src="image/Product/prod2-min.png" alt="">
                             </li>
-                            <li class="bl_mainProduct__item">
-                                <img class="bl_mainProduct__img" src="image/Product/prod2-min.png" alt="">
-                            </li>
+                            <!--<li class="bl_mainProduct__item">-->
+                                <!--<img class="bl_mainProduct__img" src="image/Product/prod2-min.png" alt="">-->
+                            <!--</li>-->
                         </ul>
 
 
@@ -307,7 +308,7 @@
 
                         <ul class="nav nav-tabs inf_product__tabs">
 
-                            <li class="inf_product__item ">
+                            <li class="inf_product__item  active">
                                 <a href="#tab-specification" data-toggle="tab">Характеристики</a>
                             </li>
 
@@ -315,7 +316,7 @@
                                 <a href="#tab-description" data-toggle="tab">Описание</a>
                             </li>
 
-                            <li class="inf_product__item active ">
+                            <li class="inf_product__item ">
                                 <a href="#tab-review" data-toggle="tab">Отзывы</a>
                             </li>
                         </ul>
@@ -323,7 +324,7 @@
                         <div class="tab-content">
 
 
-                            <div class="tab-pane " id="tab-specification">
+                            <div class="tab-pane active" id="tab-specification">
                                 <ul class="bl_attributes">
                                     <li class="bl_attributes__item">
                                         <strong>Процессор:</strong>
@@ -374,7 +375,7 @@
 
                             </div>
 
-                            <div class="tab-pane active" id="tab-review">
+                            <div class="tab-pane " id="tab-review">
 
                                 <ul class="review_slider">
 
@@ -453,16 +454,25 @@
                                     <div class="form-group">
                                         <div class="col-sm-3">
                                             <input class="review_name" type="text" name="name" value=""
-                                                   placeholder="Ваше имя:">
+                                                   placeholder="Ваше имя:" title="Ваше имя" required>
                                             <input class="review_email" type="email" name="email" value=""
-                                                   placeholder="Ваша почта:">
+                                                   placeholder="Ваша почта:" title="Ваша почта" required>
 
+
+
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <textarea class="review_textarea" name="text" rows="3" id="input-review"
+                                                      placeholder="Напишете отзыв..." title="Поле для сообщения" required></textarea>
+                                        </div>
+
+                                        <div class="col-xs-12">
                                             <div class="bl_review__raiting">
-                                                <span class="review_text">Оценить товар</span>
+                                                <span class="review_text">Ваша оценка товара:</span>
 
                                                 <div class="bl_review__raitingFull">
                                                     <input class="bl_raiting__chackbox" id="review_star5" type="radio"
-                                                           name="raiting" value="5" checked>
+                                                           name="raiting" value="5">
                                                     <label class="bl_raiting__label" for="review_star5"></label>
 
                                                     <input class="bl_raiting__chackbox" id="review_star4" type="radio"
@@ -483,10 +493,8 @@
                                                 </div>
                                             </div>
 
-                                        </div>
-                                        <div class="col-sm-9">
-                                            <textarea class="review_textarea" name="text" rows="3" id="input-review"
-                                                      placeholder="Напишете отзыв..."></textarea>
+                                            <span class="text_error">*Ваше сообщение меня чем-то не устраивает О_о </span>
+
                                         </div>
                                     </div>
 

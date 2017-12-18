@@ -281,7 +281,16 @@
     margin-left: 0;
   }
 
+
+  .review_item{
+    width: 33%;
+    max-width:initial;
+  }
+
+
+
 }
+
 
 /* Small Devices, Tablets 768px */
 @media only screen and (max-width: 768px) {
@@ -404,6 +413,11 @@
     }
   }
 
+
+  .review_item{
+    width: 48%;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -466,7 +480,15 @@
       }
     }
     
-    
+    .personal-form-review .text_error{
+      display: block;
+      margin:5px 0;
+    }
+
+    #button-review{
+      float: none;
+    }
+
   }
 
 
@@ -496,6 +518,11 @@
   }
   .bl_buttons .btn_callBack__simple{
     float: none;
+  }
+
+
+  .review_item{
+    width: 100%;
   }
 
 }

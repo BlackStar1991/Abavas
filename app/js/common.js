@@ -21,10 +21,10 @@ window.onload = function () {
 
 
     /// scrollButton
-    function slideSubMenu(btn, fieldUnderBtn, displayView){
-        btn.each(function(){
+    function slideSubMenu(btn, fieldUnderBtn, displayView) {
+        btn.each(function () {
             $(this).on({
-                click: function (){
+                click: function () {
                     if ($window.width() <= displayView) {
                         fieldUnderBtn.slideToggle(400);
                     }
@@ -32,7 +32,6 @@ window.onload = function () {
             });
         });
     }
-
 
 
     var buttonLanguage = $(".bl_language__active"),
@@ -54,14 +53,14 @@ window.onload = function () {
 
 
     var headerNavigationButton = $(".bl_navGroup__button");
-        headerNavigationButton.on("click", function () {
+    headerNavigationButton.on("click", function () {
         $(".bl_navGroup").toggleClass("active");
         $(this).toggleClass("icon-bar icon-close");
     });
 
 
     var btnShowMoreFooterInformation = $(".bl_navigation__show");
-        btnShowMoreFooterInformation.on("click", function () {
+    btnShowMoreFooterInformation.on("click", function () {
         $(this).toggleClass("active");
         $(".bl_navigation__full").slideToggle(300);
 
@@ -85,7 +84,7 @@ window.onload = function () {
 ////////// FILTERS
     var btnMobileFilters = $(".bl_filters__button"),
         fieldFilters = $(".bl_filters__full"),
-        btnFilters =$(".bl_filters__btn");
+        btnFilters = $(".bl_filters__btn");
 
     btnFilters.click(function () {
         $(this).toggleClass(active);
@@ -167,7 +166,7 @@ window.onload = function () {
             currentLoop;
         if (sliderItems > currentItems) {
             currentLoop = true;
-        }else {
+        } else {
             currentLoop = false;
         }
 
@@ -220,7 +219,7 @@ window.onload = function () {
             currentLoop;
         if (sliderItems > currentItems) {
             currentLoop = true;
-        }else {
+        } else {
             currentLoop = false;
         }
 
@@ -272,7 +271,7 @@ window.onload = function () {
             currentLoop;
         if (sliderItems > currentItems) {
             currentLoop = true;
-        }else {
+        } else {
             currentLoop = false;
         }
 
@@ -316,11 +315,6 @@ window.onload = function () {
     sliderYouReviewed();
 
 
-
-
-
-
-
 //// Main Product Slider
     function sliderMainProduct() {
 
@@ -329,7 +323,7 @@ window.onload = function () {
             currentLoop;
         if (sliderItems > currentItems) {
             currentLoop = true;
-        }else {
+        } else {
             currentLoop = false;
         }
 
@@ -368,12 +362,18 @@ window.onload = function () {
 
             }
         });
+
+////////////
+        var addedItem = $(".bl_mainProduct__item");
+        addedItem.on("click", function () {
+            var oldSrc = $(this).find(".bl_mainProduct__img").attr("src");
+            var newSrc = oldSrc.split("-min").join("");
+            $(".bl_mainProduct__mainPhoto").attr('src', newSrc);
+        })
+/////////
     }
 
     sliderMainProduct();
-
-
-
 
 
 // Ancor to top
@@ -438,19 +438,19 @@ window.onload = function () {
         });
     }
 
- //////////////// Catalog VIEW GRID/LIST
+    //////////////// Catalog VIEW GRID/LIST
 
     var catalogField = $(".bl_products"),
 
-        btnGrid =$(".js-grid"),
-        btnList =$(".js-list"),
+        btnGrid = $(".js-grid"),
+        btnList = $(".js-list"),
 
 
         viewGrid = "view-grid",
         viewList = "view-list";
 
 
-    btnList.on("click", function(){
+    btnList.on("click", function () {
 
         catalogField.removeClass(viewGrid);
         catalogField.addClass(viewList);
@@ -458,7 +458,7 @@ window.onload = function () {
     });
 
 
-    btnGrid.on("click", function(){
+    btnGrid.on("click", function () {
         catalogField.removeClass(viewList);
         catalogField.addClass(viewGrid);
 
