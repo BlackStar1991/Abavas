@@ -257,17 +257,6 @@ a.bl_socLinks__circle {
 
 }
 
-.icon-close {
-  &:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include sprite($icon-close);
-  }
-}
-
 .bl_callback__text {
   vertical-align: top;
   display: block;

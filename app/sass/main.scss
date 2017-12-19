@@ -710,6 +710,12 @@ textarea {
   }
 }
 
+.bl_slider__imgWrapper {
+  width: 100%;
+  margin: 0 auto;
+  height: 190px;
+}
+
 .bl_slider__img {
   max-height: 230px;
   display: block;
@@ -871,6 +877,11 @@ textarea {
 .view-list .bl_slider__link {
   display: inline-block;
   width: 80%;
+}
+
+.view-list .bl_slider__imgWrapper {
+
+  height: auto;
 }
 
 .view-list .bl_slider__img {
@@ -1563,7 +1574,9 @@ $transition-box: 0.4s all ease-in;
   opacity: 0;
 }
 
-.filter_text {
+.filter_text,
+.bl_delivery__text,
+.bl_payment__text {
   margin-left: 25px;
   color: #505050;
   font-family: $Calibri;
@@ -1596,7 +1609,9 @@ $transition-box: 0.4s all ease-in;
   }
 }
 
-.bl_filters__input:checked + .filter_text {
+.bl_filters__input:checked + .filter_text,
+.bl_delivery__label input:checked + .bl_delivery__text,
+.bl_payment__label input:checked + .bl_payment__text {
   font-weight: bold;
   color: $color_yellow;
 
@@ -2433,6 +2448,203 @@ $transition-box: 0.4s all ease-in;
   font-size: 18px;
   font-weight: 700;
 }
+
+.delite_product {
+  position: absolute;
+  outline: none;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  transition: all, .2s;
+  background-color: #f5f5f5;
+
+  &:hover,
+  &:focus {
+    transition: all, .2s;
+    color: #000;
+    background-color: $color_yellow;
+  }
+}
+
+.icon-close {
+  &:after {
+    content: "✕";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    color: #000;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.bl_callback .icon-close {
+  &:after {
+    font-size: 18px;
+    color: #000;
+    font-weight: 900;
+  }
+}
+
+/////////// Data User
+
+.data_user__inner {
+
+  width: 100%;
+  background-color: #fbfbfb;
+}
+
+.data_user__title {
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.data_user {
+  position: relative;
+  width: 100%;
+  padding: 44px 0;
+  color: $color_dark;
+}
+
+.data_user__recipient {
+  width: 100%;
+  input,
+  textarea {
+    width: 100%;
+    max-width: 324px;
+    height: 34px;
+    margin-bottom: 18px;
+    border: 1px solid #dfdfdf;
+    //padding-top: 10px;
+    line-height: 34px;
+    padding-left: 20px;
+    outline: none;
+
+    &::placeholder {
+      color: $color_dark;
+      font-family: $Calibri;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    &:focus {
+      border-color: $color_yellow;
+    }
+
+  }
+  textarea {
+    height: auto;
+    min-height: 104px;
+    resize: none;
+  }
+}
+
+.bl_delivery__label,
+.bl_payment__label{
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  input {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+.bl_delivery__text,
+.bl_payment__text {
+  color: $color_dark;
+  font-family: $Calibri;
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 1px;
+}
+
+.bl_delivery__box {
+  position: relative;
+  width: 100%;
+
+}
+
+select.form-control {
+
+  width: 200px;
+  &:focus {
+    border-color: $color_yellow;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 4px $color_yellow;
+  }
+}
+
+.bl_delivery__adress {
+  padding: 0;
+  width: 200px;
+  height: 150px;
+  resize: none;
+  outline-color: $color_yellow;
+  &:focus {
+    border-color: $color_yellow;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 4px $color_yellow;
+  }
+}
+
+.bl_price__full{
+  clear: both;
+  display: block;
+  float: right;
+  width: 200px;
+  height: 56px;
+  line-height: 56px;
+  color: $color_dark;
+  font-family: $Calibri;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+.btn_registred{
+  clear: both;
+  float: right;
+  margin-top: 33px;
+  width: 198px;
+  height: 55px;
+  background-color: $color_yellow;
+  color: $color_dark;
+  font-family: $Calibri;
+  font-size: 18px;
+  font-weight: 700;
+  &:hover,
+  &:focus{
+    transition: all, .2s;
+    //background-color: $color_yellow;
+  }
+}
+
+
+
+.btn_continueBuying{
+  float: right;
+  margin-bottom: 15px;
+  color: $color_dark;
+  font-size: 18px;
+  width: 198px;
+  height: 55px;
+  line-height: 54px;
+  text-align: center;
+  background-color: #d6d6d6;
+  outline: none;
+  transition: all, .2s;
+  &:hover,
+  &:focus{
+    transition: all, .2s;
+    background-color: $color_yellow;
+  }
+}
+
+
 
 /*********************************************/
 /*FOOTER*/

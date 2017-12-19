@@ -510,8 +510,22 @@ window.onload = function () {
         });
     }
 
-/////////////////
+///////////////// Basket
 
+   var deliveryLable = $(".bl_delivery__label"),
+       deliveryBox = ".bl_delivery__box",
+    paymentLable = $(".bl_payment__label"),
+        paymentBox = ".bl_payment__box";
+
+
+    deliveryLable.on("click", function(){
+        $(deliveryBox).addClass("hidden");
+        $(this).next(deliveryBox).removeClass("hidden");
+    });
+    paymentLable.on("click", function(){
+        $(paymentBox).addClass("hidden");
+        $(this).next(paymentBox).removeClass("hidden");
+    });
 
 
     /// POPUP BIFORE ADD TO SHOPBAG
