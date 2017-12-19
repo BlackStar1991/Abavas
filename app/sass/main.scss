@@ -643,7 +643,6 @@ textarea {
   border-bottom: 10px solid $color_yellow;
 }
 
-
 .icon_star__full,
 .icon_star__empty {
   &:after {
@@ -663,7 +662,6 @@ textarea {
   }
 }
 
-
 .slider_name {
 
   color: $color_dark;
@@ -679,7 +677,8 @@ textarea {
   margin-top: 77px;
   width: 100%;
 }
-.bl_sliderHits__full .slider_name{
+
+.bl_sliderHits__full .slider_name {
   text-align: center;
 }
 
@@ -1152,6 +1151,7 @@ $recomendationTrandition: $recomendationTime all;
     width: 100%;
     text-decoration: none;
     color: inherit;
+    outline-color: $color_yellow;
 
     &:hover {
       color: $color_dark;
@@ -2092,7 +2092,7 @@ $transition-box: 0.4s all ease-in;
   font-weight: 400;
   color: $color_dark;
 
-  &:nth-of-type(odd){
+  &:nth-of-type(odd) {
     background-color: #fbfbfb;
   }
 }
@@ -2142,11 +2142,9 @@ $transition-box: 0.4s all ease-in;
 
 ////
 
-
-
-.personal-form-review{
-  input,textarea{
-    &::placeholder{
+.personal-form-review {
+  input, textarea {
+    &::placeholder {
       color: #939393;
       font-family: "Calibri - Light Italic", "Calibri", sans-serif;
       font-style: italic;
@@ -2154,40 +2152,41 @@ $transition-box: 0.4s all ease-in;
       font-weight: 400;
       line-height: 24px;
     }
-    &:focus{
+    &:focus {
       outline-color: $color_yellow;
     }
   }
 }
 
-
 .review_name,
-.review_email{
+.review_email {
   width: 290px;
   height: 30px;
   border: 1px solid #d1d1d1;
   margin-bottom: 10px;
 }
-.review_textarea{
+
+.review_textarea {
   width: 100%;
   min-height: 70px;
   margin-left: 1%;
   border: 1px solid #d1d1d1;
-  resize:none;
+  resize: none;
 }
 
-.review_text{
+.review_text {
   vertical-align: top;
   color: #939393;
   font-family: $Calibri;
   font-size: 18px;
 }
-.bl_review__raiting .text_error{
+
+.bl_review__raiting .text_error {
   display: inline-block;
   vertical-align: top;
 }
 
-.bl_review__raitingFull input{
+.bl_review__raitingFull input {
   position: absolute;
   left: 0;
   top: 0;
@@ -2221,8 +2220,6 @@ $transition-box: 0.4s all ease-in;
   }
 }
 
-
-
 .bl_review__raiting {
   clear: both;
   display: inline-block;
@@ -2232,13 +2229,14 @@ $transition-box: 0.4s all ease-in;
   display: inline-block;
   position: relative;
 }
-.personal-form-review .text_error{
+
+.personal-form-review .text_error {
   vertical-align: top;
   margin: 0 5px;
 }
 
 .bl_review__raitingFull input:checked + label:before,
-.bl_review__raitingFull input:checked ~ label:before{
+.bl_review__raitingFull input:checked ~ label:before {
   position: absolute;
   content: "\2605";
 
@@ -2248,6 +2246,7 @@ $transition-box: 0.4s all ease-in;
   color: $color_yellow;
   font-size: 24px;
 }
+
 .bl_review__raitingFull label:hover ~ label:before,
 .bl_review__raitingFull label:hover:before {
   position: absolute;
@@ -2258,9 +2257,6 @@ $transition-box: 0.4s all ease-in;
   color: $color_yellow;
   font-size: 24px;
 }
-
-
-
 
 .bl_reviewSmall {
   display: inline-block;
@@ -2277,8 +2273,7 @@ $transition-box: 0.4s all ease-in;
   }
 }
 
-
-#button-review{
+#button-review {
   float: right;
   width: 100px;
   height: 28px;
@@ -2291,42 +2286,153 @@ $transition-box: 0.4s all ease-in;
   transition: .3s all;
 
   &:hover,
-  &:focus{
+  &:focus {
     transition: .3s all;
     background-color: $color_dark;
     color: $color_yellow;
   }
 }
 
-
 ////////// Slider Рекомендуемые товары
-.bl_sliderRecommended__full{
+.bl_sliderRecommended__full {
   clear: both;
   width: 100%;
   margin-top: 70px;
   margin-bottom: 45px;
 }
-.bl_sliderRecommended{
+
+.bl_sliderRecommended {
   margin-top: 60px;
   width: 100%;
 }
 
-
-
 //////// Slider вы просматривали
 
-.bl_sliderYouReviewed__full{
+.bl_sliderYouReviewed__full {
   width: 100%;
   margin-top: 70px;
   margin-bottom: 45px;
 }
 
-.bl_sliderYouReviewed{
+.bl_sliderYouReviewed {
   margin-top: 60px;
 
   width: 100%;
 }
 
+///////// BASKET
+
+.block_quantity__box {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  box-sizing: border-box;
+}
+
+.block_quantity__minus,
+.block_quantity__plus {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: none;
+  box-sizing: border-box;
+  border-radius: 50%;
+  color: $color_dark;
+  outline: none;
+  font-size: 18px;
+  line-height: 18px;
+  &:hover {
+    color: $color_yellow;
+  }
+  &:focus {
+    box-shadow: 0 0 2px 1px $color_yellow;
+  }
+
+}
+
+.block_quantity__input {
+  display: inline-block;
+  width: 22px;
+  vertical-align: top;
+  text-align: center;
+  box-sizing: border-box;
+  border: none;
+  outline-color: $color_yellow;
+
+  &::placeholder {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 38px;
+    text-transform: uppercase;
+  }
+}
+
+///
+
+.table_title {
+  margin: 10px 0;
+  text-align: center;
+  color: #c4c4c4;
+  font-family: $Calibri;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.table_title__left {
+  text-align: left;
+}
+
+.shoppingBasket_product__title {
+  width: 100%;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.shoppingBasket_product__good {
+  width: 100%;
+  margin-top: 17px;
+}
+
+.shoppingBasket_product__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 70px;
+  text-align: center;
+
+  color: #505050;
+  font-size: 18px;
+  font-weight: 400;
+
+}
+
+.shoppingBasket_product__name {
+  color: $color_dark;
+  font-weight: 700;
+}
+
+.shoppingBasket_product__id {
+  text-transform: uppercase;
+}
+
+.good-price__old {
+  text-decoration: line-through;
+}
+
+.good-price__new {
+  color: #505050;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.good-price__normal {
+  color: $color_dark;
+  font-size: 18px;
+  font-weight: 700;
+}
 
 /*********************************************/
 /*FOOTER*/
