@@ -2692,6 +2692,81 @@ select.form-control {
   }
 }
 
+//// Our Projects
+
+.ourProjects_top{
+  width: 100%;
+  background: $color_yellow url("../image/bg_elements/ourProgects_bg.png") 100% 50% no-repeat;
+  height: 256px;
+
+}
+
+.ourProjects_top__title{
+  margin-top: 86px;
+  color: #000;
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.ourProjects_top__text{
+  margin-top: 32px;
+  max-width:440px;
+  color: $color_dark;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+
+.ourProjects__all{
+
+  width: 100%;
+  padding: 52px 0;
+
+}
+
+
+.ourProjects__item{
+  display: inline-block;
+  max-width: 33%;
+  height: 260px;
+
+  border: 1px solid red;
+
+}
+
+.ourProjects__name{
+  margin-top: 40px;
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ourProjects__description{
+  margin-top: 15px;
+  color: #505050;
+  font-family: $Calibri;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+.btn_details{
+  position: relative;
+  display: block;
+  margin-top: 22px;
+  width: 118px;
+  height: 38px;
+  color: $color_dark;
+  text-align: center;
+  line-height: 38px;
+  font-size: 16px;
+  background-color: $color_yellow;
+}
+
+
+
 /*********************************************/
 /*FOOTER*/
 /*********************************************/
