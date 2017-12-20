@@ -287,6 +287,19 @@
     max-width:initial;
   }
 
+.shoppingBasket_product__item{
+  display: block;
+}
+
+
+  .bl_price__full, .btn_continueBuying{
+    float: none;
+    margin-top: 15px;
+  }
+
+  .btn_registred{
+    margin-top: 15px;
+  }
 
 
 }
@@ -418,6 +431,8 @@
     width: 48%;
   }
 
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -523,6 +538,13 @@
 
   .review_item{
     width: 100%;
+  }
+
+  .bl_price__full{
+    display: block;
+  }
+  .btn_registred{
+    float: none;
   }
 
 }

@@ -2512,12 +2512,13 @@ $transition-box: 0.4s all ease-in;
   width: 100%;
   input,
   textarea {
+
     width: 100%;
     max-width: 324px;
     height: 34px;
     margin-bottom: 18px;
     border: 1px solid #dfdfdf;
-    //padding-top: 10px;
+    vertical-align: top;
     line-height: 34px;
     padding-left: 20px;
     outline: none;
@@ -2542,20 +2543,26 @@ $transition-box: 0.4s all ease-in;
 }
 
 .bl_delivery__label,
-.bl_payment__label{
+.bl_payment__label {
   position: relative;
   display: block;
   width: 100%;
   cursor: pointer;
+  color: $color_dark;
   input {
     position: absolute;
     visibility: hidden;
   }
+  &:focus{
+    color: $color_yellow;
+  }
+
+
 }
 
 .bl_delivery__text,
 .bl_payment__text {
-  color: $color_dark;
+  color: inherit;
   font-family: $Calibri;
   font-size: 16px;
   font-weight: 400;
@@ -2589,9 +2596,10 @@ select.form-control {
   }
 }
 
-.bl_price__full{
+.bl_price__full {
+  position: relative;
   clear: both;
-  display: block;
+  display: inline-block;
   float: right;
   width: 200px;
   height: 56px;
@@ -2601,11 +2609,31 @@ select.form-control {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
-  border: 1px solid red;
   box-sizing: border-box;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 25px;
+    height: 100%;
+    border: 4px solid $color_yellow;
+    border-right: none;
+  }
+  &:after {
+    left:auto;
+    right: 0;
+    border-left: none;
+    border-right: 4px solid $color_yellow;
+
+  }
+
 }
 
-.btn_registred{
+.btn_registred {
+  position: relative;
   clear: both;
   float: right;
   margin-top: 33px;
@@ -2616,16 +2644,35 @@ select.form-control {
   font-family: $Calibri;
   font-size: 18px;
   font-weight: 700;
+  outline: none;
+  overflow: hidden;
+  span{
+    position: relative;
+    z-index: 2;
+  }
+  &:before{
+    position: absolute;
+    left: 0;
+    top: 55px;
+    content: '';
+    height: 100%;
+    width: 100%;
+    transition: .3s all ease;
+    background: $color_yellow2;
+    z-index: 1;
+  }
+
   &:hover,
-  &:focus{
-    transition: all, .2s;
-    //background-color: $color_yellow;
+  &:focus {
+    &:before{
+      top:0;
+      transition: .3s all ease;
+    }
   }
 }
 
-
-
-.btn_continueBuying{
+.btn_continueBuying {
+  display: block;
   float: right;
   margin-bottom: 15px;
   color: $color_dark;
@@ -2637,14 +2684,13 @@ select.form-control {
   background-color: #d6d6d6;
   outline: none;
   transition: all, .2s;
+  outline-color: $color_yellowDark;
   &:hover,
-  &:focus{
+  &:focus {
     transition: all, .2s;
     background-color: $color_yellow;
   }
 }
-
-
 
 /*********************************************/
 /*FOOTER*/

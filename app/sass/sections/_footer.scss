@@ -86,13 +86,13 @@
   float: left;
   width: 176px;
   height: 35px;
-  background-color: inherit;
+  background-color: #25231f;
   padding-left: 11px;
   color: $color_yellow;
   border: 1px solid $color_yellow;
   outline: none;
   &::placeholder {
-
+    color: $color_grey2;
     font-style: italic;
   }
 
