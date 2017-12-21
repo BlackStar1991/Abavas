@@ -302,6 +302,12 @@
   }
 
 
+
+  .ourProjects__item{
+    height: 360px;
+  }
+
+
 }
 
 
@@ -433,6 +439,22 @@
 
 
 
+  .ourProjects__item{
+    max-width:49%;
+    height: 320px;
+
+
+    &:nth-of-type(3n-1){
+      margin:0;
+    }
+    &:nth-of-type(2n){
+      margin-left:1%;
+    }
+
+
+  }
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -506,6 +528,19 @@
 
   }
 
+
+
+  .ourProjects__item{
+    display: block;
+    max-width:98%;
+    height: 320px;
+    margin: 20px 1%;
+
+  }
+
+  .ourProjects_top__box, .ourProjects_top__image{
+    margin-top: 10px;
+  }
 
 }
 

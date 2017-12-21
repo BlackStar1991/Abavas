@@ -1168,6 +1168,7 @@ $recomendationTrandition: $recomendationTime all;
       color: $color_dark;
     }
     &:focus {
+      outline: none;
       text-decoration: underline;
     }
   }
@@ -2726,18 +2727,55 @@ select.form-control {
 
 }
 
-
-.ourProjects__item{
+.ourProjects_top__image{
   display: inline-block;
-  max-width: 33%;
-  height: 260px;
+  margin-top: 80px;
+  vertical-align: top;
+  margin-right: 4%;
+}
 
-  border: 1px solid red;
+.ourProjects_top__box{
+  display: inline-block;
+  margin-top: 80px;
+  .ourProjects_top__title{
+    margin-top: 0;
+  }
+
+  .ourProjects_top__text{
+    max-width:initial;
+    margin-top:18px;
+
+  }
+  a{
+    &:hover,
+    &:focus{
+      outline: none;
+      text-decoration: underline;
+    }
+  }
 
 }
 
+
+.ourProjects__item{
+  display: inline-block;
+  vertical-align: top;
+  max-width: 32%;
+  height: 306px;
+  margin-bottom: 5%;
+
+  border: 1px solid $color_lightGrey;
+  &:nth-of-type(3n-1){
+    margin: 0 1.5%;
+  }
+}
+
+.ourProjects__img{
+  max-height: 100px;
+}
+
 .ourProjects__name{
-  margin-top: 40px;
+  margin-top: 20px;
   color: #000;
   font-size: 22px;
   font-weight: 700;
@@ -2752,6 +2790,29 @@ select.form-control {
 }
 
 
+
+.ourProjects__ceo{
+  width: 100%;
+  margin-bottom: 50px;
+
+  h2{
+    line-height: 24px;
+    color: $color_dark;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 5%;
+  }
+  p{
+    color: #696969;
+    font-family: $Calibri;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+}
+
+
 .btn_details{
   position: relative;
   display: block;
@@ -2761,9 +2822,67 @@ select.form-control {
   color: $color_dark;
   text-align: center;
   line-height: 38px;
-  font-size: 16px;
+  font-size: 18px;
   background-color: $color_yellow;
+  transition: all .2s;
+
+
+  &:hover,
+  &:focus{
+    background-color: $color_yellow2;
+    transition: all .2s;
+    outline-color: $color_yellow;
+    outline-width: 2px;
+  }
+
+
+  &.arrow-link{
+    &:after{
+      top: 14px;
+      right: 5px;
+    }
+  }
+
 }
+
+.ourProjects__all + .bl_pagination{
+  margin-bottom: 50px;
+}
+
+
+.bl_moreInfo{
+  width: 100%;
+  min-height: 304px;
+  margin: 10px auto;
+  text-align: center;
+  background: #fbfbfb url("../image/bg_elements/ziom.png") 50% 50% no-repeat;
+}
+.bl_moreInfo__text{
+  margin-top: 104px;
+  color: $color_dark;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.bl_moreInfo__btn{
+  display: block;
+  margin: 23px auto 0;
+  background-color: $color_yellow;
+  min-width: 257px;
+  color: $color_dark;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  transition: .2s all;
+  &:hover,&:focus{
+    outline: $color_yellow 2px;
+    background-color: $color_yellow2;
+    transition: .2s all;
+  }
+}
+
+
 
 
 
