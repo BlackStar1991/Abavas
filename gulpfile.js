@@ -98,7 +98,7 @@ gulp.task('images', ['sprite'], function () {
             }],
             use: [pngquant({                            // minify png-format images
                 quality: '50-70',
-                speed: 4
+                speed: 3
             })],
             interlaced: true
 
