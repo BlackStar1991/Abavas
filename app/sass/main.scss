@@ -1274,6 +1274,7 @@ $recomendationTrandition: $recomendationTime all;
   }
 }
 
+
 .bl_catalog__item.active .bl_catalog__link {
   color: #515151;
   &:hover {
@@ -1285,9 +1286,16 @@ $recomendationTrandition: $recomendationTime all;
   color: $color_yellowDark;
 }
 
-.bl_catalog__item.active > .bl_catalog__subCatalog {
+
+.bl_catalog__item .bl_catalog__subCatalog{
   padding-left: 15px;
+  display: none;
 }
+
+.bl_catalog__item.active .bl_catalog__subCatalog{
+  display: block;
+}
+
 
 .bl_catalog__btn,
 .bl_filters__btn {

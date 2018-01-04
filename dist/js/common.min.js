@@ -77,8 +77,8 @@ window.onload = function () {
 
     btnCategories.click(function () {
         $(this).toggleClass(active);
-        $(this).parent(".bl_catalogs__item").toggleClass(active);
-        $(this).siblings("ul").eq(0).slideToggle(400);
+        $(this).parent(".bl_catalog__item").toggleClass(active);
+        // $(this).siblings("ul").eq(0).slideToggle(400);
     });
 
 ////////// FILTERS
