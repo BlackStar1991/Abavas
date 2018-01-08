@@ -529,24 +529,24 @@ window.onload = function () {
 
 
     /// POPUP BIFORE ADD TO SHOPBAG
-    //
-    //     function popupWindowBiforeAddToShopBag() {
-    //
-    //         var TESTBUTTON = $(".TEST_BUTTON");
-    //
-    //         var popupWindow = $(".popup_likeShopbag"),
-    //             buttonClose = $(".popup_likeShopbag__close"),
-    //             buttonContinueBuying = $(".popup_likeShopbag__continueBuying");
-    //
-    //         popupWindowShow(TESTBUTTON, popupWindow);
-    //
-    //         closePopupWindow(buttonClose, popupWindow);
-    //         closePopupWindow(buttonContinueBuying, popupWindow);
-    //         closePopupWindow(blackWrapper, popupWindow);
-    //
-    //     }
-    //
-    //     popupWindowBiforeAddToShopBag();
+
+        function popupWindowBiforeAddToShopBag() {
+
+            var TESTBUTTON = $(".TEST_BUTTON");
+
+            var popupWindow = $(".popup_likeShopbag"),
+                buttonClose = $(".popup_likeShopbag__close"),
+                buttonContinueBuying = $(".popup_likeShopbag__continueBuying");
+
+            popupWindowShow(TESTBUTTON, popupWindow);
+
+            closePopupWindow(buttonClose, popupWindow);
+            closePopupWindow(buttonContinueBuying, popupWindow);
+            closePopupWindow(blackWrapper, popupWindow);
+
+        }
+
+        popupWindowBiforeAddToShopBag();
 
     ////////// CallBack PopUp
 
